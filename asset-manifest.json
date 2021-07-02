@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hollow-knight/static/css/main.515ab93f.chunk.css",
-    "main.js": "/hollow-knight/static/js/main.57a6f17a.chunk.js",
-    "main.js.map": "/hollow-knight/static/js/main.57a6f17a.chunk.js.map",
+    "main.js": "/hollow-knight/static/js/main.7131f602.chunk.js",
+    "main.js.map": "/hollow-knight/static/js/main.7131f602.chunk.js.map",
     "runtime-main.js": "/hollow-knight/static/js/runtime-main.e39b2733.js",
     "runtime-main.js.map": "/hollow-knight/static/js/runtime-main.e39b2733.js.map",
     "static/js/2.4f9bfb88.chunk.js": "/hollow-knight/static/js/2.4f9bfb88.chunk.js",
@@ -12,12 +12,12 @@
     "index.html": "/hollow-knight/index.html",
     "static/css/main.515ab93f.chunk.css.map": "/hollow-knight/static/css/main.515ab93f.chunk.css.map",
     "static/js/2.4f9bfb88.chunk.js.LICENSE.txt": "/hollow-knight/static/js/2.4f9bfb88.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/hollow-knight/static/media/logo.6ce24c58.svg"
+    "static/media/logo.5db7134b.png": "/hollow-knight/static/media/logo.5db7134b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e39b2733.js",
     "static/js/2.4f9bfb88.chunk.js",
     "static/css/main.515ab93f.chunk.css",
-    "static/js/main.57a6f17a.chunk.js"
+    "static/js/main.7131f602.chunk.js"
   ]
 }
