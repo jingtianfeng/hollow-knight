@@ -1,5 +1,5 @@
 import logo from './img/logo.png';
-import './App.css';
+import './App.sass';
 import {ReactComponent as AstronautRobot2} from '@streamlinehq/streamlinehq/img/illustrations-duotone/robot/robots-explorer/astronaut-robot-2.svg';
 
 function App() {
