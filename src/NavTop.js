@@ -1,10 +1,11 @@
-import logo from './img/icon/white-64.png'
+import Logo from './img/icon/white-64.png'
+import CartIcon from "./CartIcon";
 
 function NavTop() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <img src={logo} alt="logo"
+                <img src={Logo} alt="logo"
                      className="navbar-brand"/>
                 <button className="navbar-toggler"
                         type="button"
@@ -22,6 +23,7 @@ function NavTop() {
                             <a href="/" className="nav-link">Home</a>
                         </li>
                     </ul>
+                    <CartIcon/>
                 </div>
             </div>
         </nav>
