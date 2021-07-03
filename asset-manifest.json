@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/hollow-knight/static/css/main.515ab93f.chunk.css",
-    "main.js": "/hollow-knight/static/js/main.269be0b1.chunk.js",
-    "main.js.map": "/hollow-knight/static/js/main.269be0b1.chunk.js.map",
+    "main.css": "/hollow-knight/static/css/main.3eb5a86b.chunk.css",
+    "main.js": "/hollow-knight/static/js/main.26bf7f56.chunk.js",
+    "main.js.map": "/hollow-knight/static/js/main.26bf7f56.chunk.js.map",
     "runtime-main.js": "/hollow-knight/static/js/runtime-main.603132a1.js",
     "runtime-main.js.map": "/hollow-knight/static/js/runtime-main.603132a1.js.map",
-    "static/js/2.aa675ed9.chunk.js": "/hollow-knight/static/js/2.aa675ed9.chunk.js",
-    "static/js/2.aa675ed9.chunk.js.map": "/hollow-knight/static/js/2.aa675ed9.chunk.js.map",
+    "static/js/2.1218e76d.chunk.js": "/hollow-knight/static/js/2.1218e76d.chunk.js",
+    "static/js/2.1218e76d.chunk.js.map": "/hollow-knight/static/js/2.1218e76d.chunk.js.map",
     "static/js/3.39ae9402.chunk.js": "/hollow-knight/static/js/3.39ae9402.chunk.js",
     "static/js/3.39ae9402.chunk.js.map": "/hollow-knight/static/js/3.39ae9402.chunk.js.map",
     "index.html": "/hollow-knight/index.html",
-    "static/css/main.515ab93f.chunk.css.map": "/hollow-knight/static/css/main.515ab93f.chunk.css.map",
-    "static/js/2.aa675ed9.chunk.js.LICENSE.txt": "/hollow-knight/static/js/2.aa675ed9.chunk.js.LICENSE.txt",
-    "static/media/astronaut-robot-2.svg": "/hollow-knight/static/media/astronaut-robot-2.5a0def28.svg",
-    "static/media/logo.5db7134b.png": "/hollow-knight/static/media/logo.5db7134b.png"
+    "static/css/main.3eb5a86b.chunk.css.map": "/hollow-knight/static/css/main.3eb5a86b.chunk.css.map",
+    "static/js/2.1218e76d.chunk.js.LICENSE.txt": "/hollow-knight/static/js/2.1218e76d.chunk.js.LICENSE.txt",
+    "static/media/shopping-cart-1.svg": "/hollow-knight/static/media/shopping-cart-1.7a0ffb0b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.603132a1.js",
-    "static/js/2.aa675ed9.chunk.js",
-    "static/css/main.515ab93f.chunk.css",
-    "static/js/main.269be0b1.chunk.js"
+    "static/js/2.1218e76d.chunk.js",
+    "static/css/main.3eb5a86b.chunk.css",
+    "static/js/main.26bf7f56.chunk.js"
   ]
 }
