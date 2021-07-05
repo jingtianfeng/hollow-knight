@@ -1,12 +1,10 @@
-import Logo from './img/icon/white-64.png'
-import CartIcon from "./CartIcon";
+import icon from './img/icon/black-64.png'
+import ShoppingCart from '@streamlinehq/streamlinehq/img/streamline-light/shopping-ecommerce/carts/shopping-cart-1.svg'
 
 function NavTop() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
-                <img src={Logo} alt="logo"
-                     className="navbar-brand"/>
                 <button className="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
@@ -16,6 +14,12 @@ function NavTop() {
                         aria-label="toggle navigation">
                     <span className="navbar-toggler-icon"/>
                 </button>
+                <img src={icon} alt="icon"
+                     className="navbar-brand"/>
+                <div className="">
+                    <img src={ShoppingCart} alt="shopping cart"/>
+                    <span>(USD $19.95)</span>
+                </div>
                 <div id="navbar__container__menu"
                      className="collapse navbar-collapse">
                     <ul className="navbar-nav">
@@ -23,7 +27,6 @@ function NavTop() {
                             <a href="/" className="nav-link">Home</a>
                         </li>
                     </ul>
-                    <CartIcon/>
                 </div>
             </div>
         </nav>
