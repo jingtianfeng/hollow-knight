@@ -57,8 +57,13 @@ function BookJournal() {
                         </li>
                     </ul>
                 </div>
+                <label htmlFor="#journal__form__number">
+                    QTY (max. 5)
+                </label>
+                <input type="number" min="1" max="5"
+                       id="#journal__form__number"/>
                 <div id="journal__form__price">
-                    $29
+                    $29 x 1 = $29
                 </div>
                 <button type="button"
                         id="journal__form__button">
