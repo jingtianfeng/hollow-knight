@@ -38,9 +38,9 @@ function BookJournal() {
                 </button>
             </div>
             <div id="journal__form">
-                <h2 id="journal__form__title">
+                <h3 id="journal__form__title">
                     Wanderer's Journal
-                </h2>
+                </h3>
                 <div id="journal__form__description">
                     <p>
                         Art book features:

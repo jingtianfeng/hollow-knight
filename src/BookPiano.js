@@ -32,9 +32,9 @@ function BookPiano() {
                 </button>
             </div>
             <div id="piano__form">
-                <h2 id="piano__form__title">
+                <h3 id="piano__form__title">
                     Piano Collections
-                </h2>
+                </h3>
                 <div id="piano__form__description">
                     <p>
                         Includes sheet music for the following songs:

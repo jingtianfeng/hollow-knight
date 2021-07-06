@@ -10,6 +10,9 @@ function App() {
             <NavTop/>
             <Header/>
             <section id="section-book">
+                <h2>
+                    Books
+                </h2>
                 <div className="container">
                     <BookPiano/>
                     <BookJournal/>
