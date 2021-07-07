@@ -49,11 +49,12 @@ function App() {
                     </div>
                 </div>
             </section>
-            <section id="section-newsletter">
+            <footer id="footer">
                 <div className="container">
                     <img src={myla} alt="myla wants you to join our newsletter"
                          className=""/>
-                    <form action="/">
+                    <form action="/"
+                          id="newsletter">
                         <label htmlFor="newsletter__input"
                                className="">
                             Join our newsletter!
@@ -62,8 +63,11 @@ function App() {
                                id="newsletter__input"/>
                         <button>sign up</button>
                     </form>
+                    <p id="signature">
+                        Made with ♥ by JT Feng
+                    </p>
                 </div>
-            </section>
+            </footer>
         </>
     )
 }
