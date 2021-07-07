@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hollow-knight/static/css/main.33fc59e5.chunk.css",
-    "main.js": "/hollow-knight/static/js/main.e2ba04db.chunk.js",
-    "main.js.map": "/hollow-knight/static/js/main.e2ba04db.chunk.js.map",
+    "main.js": "/hollow-knight/static/js/main.e71eaf80.chunk.js",
+    "main.js.map": "/hollow-knight/static/js/main.e71eaf80.chunk.js.map",
     "runtime-main.js": "/hollow-knight/static/js/runtime-main.41b23035.js",
     "runtime-main.js.map": "/hollow-knight/static/js/runtime-main.41b23035.js.map",
     "static/js/2.1218e76d.chunk.js": "/hollow-knight/static/js/2.1218e76d.chunk.js",
@@ -13,7 +13,10 @@
     "static/css/main.33fc59e5.chunk.css.map": "/hollow-knight/static/css/main.33fc59e5.chunk.css.map",
     "static/js/2.1218e76d.chunk.js.LICENSE.txt": "/hollow-knight/static/js/2.1218e76d.chunk.js.LICENSE.txt",
     "static/media/Header.sass": "/hollow-knight/static/media/banner.b53230a8.png",
+    "static/media/gods-nightmares-2.c1a56555.webp": "/hollow-knight/static/media/gods-nightmares-2.c1a56555.webp",
     "static/media/logo.5db7134b.png": "/hollow-knight/static/media/logo.5db7134b.png",
+    "static/media/myla.1f69677d.png": "/hollow-knight/static/media/myla.1f69677d.png",
+    "static/media/original-2.1dd80d1d.webp": "/hollow-knight/static/media/original-2.1dd80d1d.webp",
     "static/media/piano-collection-1.a9a6e6a7.webp": "/hollow-knight/static/media/piano-collection-1.a9a6e6a7.webp",
     "static/media/piano-collection-2.8d10b96f.webp": "/hollow-knight/static/media/piano-collection-2.8d10b96f.webp",
     "static/media/shopping-cart-1.svg": "/hollow-knight/static/media/shopping-cart-1.7a0ffb0b.svg",
@@ -25,6 +28,6 @@
     "static/js/runtime-main.41b23035.js",
     "static/js/2.1218e76d.chunk.js",
     "static/css/main.33fc59e5.chunk.css",
-    "static/js/main.e2ba04db.chunk.js"
+    "static/js/main.e71eaf80.chunk.js"
   ]
 }
