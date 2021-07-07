@@ -57,11 +57,11 @@ function BookPiano() {
                         <li>Grimm Troupe</li>
                     </ol>
                 </div>
-                <label htmlFor="#piano__form__number">
+                <label htmlFor="piano__form__number">
                     QTY (max. 5)
                 </label>
                 <input type="number" min="1" max="5"
-                       id="#piano__form__number"/>
+                       id="piano__form__number"/>
                 <div id="piano__form__price">
                     $25 x 1 = $25
                 </div>
