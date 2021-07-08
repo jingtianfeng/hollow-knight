@@ -1,6 +1,6 @@
-import journal1 from './img/book/wanderer-journal-1.webp'
-import journal2 from './img/book/wanderer-journal-2.webp'
-import journal3 from './img/book/wanderer-journal-3.webp'
+import journal1 from './img/book/wanderer-journal-1.png'
+import journal2 from './img/book/wanderer-journal-2.png'
+import journal3 from './img/book/wanderer-journal-3.png'
 
 function BookJournal() {
     return (

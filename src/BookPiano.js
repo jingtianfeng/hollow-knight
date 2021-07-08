@@ -1,5 +1,5 @@
-import piano1 from './img/book/piano-collection-1.webp'
-import piano2 from './img/book/piano-collection-2.webp'
+import piano1 from './img/book/piano-collection-1.png'
+import piano2 from './img/book/piano-collection-2.png'
 
 function BookPiano() {
     return (

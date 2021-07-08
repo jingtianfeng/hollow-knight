@@ -3,8 +3,8 @@ import NavTop from "./NavTop"
 import Header from "./Header";
 import BookPiano from "./BookPiano";
 import BookJournal from "./BookJournal";
-import vinylGN2 from "./img/vinyl/gods-nightmares-2.webp"
-import vinylOriginal2 from "./img/vinyl/original-2.webp"
+import vinylGN2 from "./img/vinyl/gods-nightmares-2.png"
+import vinylOriginal2 from "./img/vinyl/original-2.png"
 import myla from "./img/myla.png"
 
 function App() {
