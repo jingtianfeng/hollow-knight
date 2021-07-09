@@ -1,6 +1,6 @@
 import "./App.sass"
 import icon from './img/icon/black-64.png'
-import ShoppingCart from '@streamlinehq/streamlinehq/img/streamline-light/shopping-ecommerce/carts/shopping-cart-1.svg'
+import cart from '@streamlinehq/streamlinehq/img/streamline-light/shopping-ecommerce/carts/shopping-cart-1.svg'
 import logo from './img/logo.png'
 import BookPiano from "./BookPiano";
 import BookJournal from "./BookJournal";
@@ -25,9 +25,10 @@ function App() {
                     <img src={icon} alt="icon"
                          className="navbar-brand"/>
                     <button type="button"
-                            className="btn btn-primary"
-                            data-bs-toggle="modal" data-bs-target="#cart">
-                        <img src={ShoppingCart} alt="shopping cart"/>
+                            className="btn"
+                            data-bs-toggle="offcanvas" data-bs-target="#cart"
+                            aria-controls="cart">
+                        <img src={cart} alt="cart icon"/>
                         <span>(USD $19.95)</span>
                     </button>
                     <div id="navbar__container__menu"
@@ -40,38 +41,31 @@ function App() {
                     </div>
                 </div>
             </nav>
-            <div id="cart" className="modal fade"
-                 aria-hidden="true" aria-labelledby="cart"
-                 tabIndex="-1">
-                <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h2 className="modal-title">
-                                Cart
-                            </h2>
-                            <button type="button"
-                                    className="btn-close"
-                                    data-bs-dismiss="modal"
-                                    aria-label="close"/>
-                        </div>
-                        <div className="modal-body">
-                            Show a second modal and hide this one with the button below.
-                        </div>
-                        <div className="modal-footer">
-                            <button className="btn btn-primary"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#checkout"
-                                    data-bs-dismiss="modal">
-                                checkout
-                            </button>
-                        </div>
-                    </div>
+            <div id="cart" className="offcanvas offcanvas-end"
+                 data-bs-backdrop="false" data-bs-scroll="true"
+                 aria-hidden="true" aria-labelledby="cart" tabIndex="-1">
+                <div className="offcanvas-header">
+                    <h2 className="offcanvas-title">
+                        Cart
+                    </h2>
+                    <button type="button"
+                            className="btn-close text-reset"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="close"/>
+                </div>
+                <div className="offcanvas-body">
+                    Your cart is empty.
+                    <button className="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#checkout"
+                            data-bs-dismiss="offcanvas">
+                        checkout
+                    </button>
                 </div>
             </div>
             <div id="checkout" className="modal fade"
-                 aria-hidden="true" aria-labelledby="checkout"
-                 tabIndex="-1">
-                <div className="modal-dialog modal-fullscreen">
+                 aria-hidden="true" aria-labelledby="checkout" tabIndex="-1">
+                <div className="modal-dialog modal-xl">
                     <div className="modal-content">
                         <div className="modal-header">
                             <h2 className="modal-title">
@@ -87,7 +81,7 @@ function App() {
                         </div>
                         <div className="modal-footer">
                             <button className="btn btn-primary"
-                                    data-bs-toggle="modal"
+                                    data-bs-toggle="offcanvas"
                                     data-bs-target="#cart"
                                     data-bs-dismiss="modal">
                                 back to cart
