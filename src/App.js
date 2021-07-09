@@ -1,6 +1,7 @@
 import "./App.sass"
-import NavTop from "./NavTop"
-import Header from "./Header";
+import icon from './img/icon/black-64.png'
+import ShoppingCart from '@streamlinehq/streamlinehq/img/streamline-light/shopping-ecommerce/carts/shopping-cart-1.svg'
+import logo from './img/logo.png'
 import BookPiano from "./BookPiano";
 import BookJournal from "./BookJournal";
 import vinylGN2 from "./img/vinyl/gods-nightmares-2.png"
@@ -10,8 +11,100 @@ import myla from "./img/myla.png"
 function App() {
     return (
         <>
-            <NavTop/>
-            <Header/>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container">
+                    <button className="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbar__container__menu"
+                            aria-controls="navbar__container__menu"
+                            aria-expanded="false"
+                            aria-label="toggle navigation">
+                        <span className="navbar-toggler-icon"/>
+                    </button>
+                    <img src={icon} alt="icon"
+                         className="navbar-brand"/>
+                    <button type="button"
+                            className="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#cart">
+                        <img src={ShoppingCart} alt="shopping cart"/>
+                        <span>(USD $19.95)</span>
+                    </button>
+                    <div id="navbar__container__menu"
+                         className="collapse navbar-collapse">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a href="/" className="nav-link">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="cart" className="modal fade"
+                 aria-hidden="true" aria-labelledby="cart"
+                 tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h2 className="modal-title">
+                                Cart
+                            </h2>
+                            <button type="button"
+                                    className="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="close"/>
+                        </div>
+                        <div className="modal-body">
+                            Show a second modal and hide this one with the button below.
+                        </div>
+                        <div className="modal-footer">
+                            <button className="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkout"
+                                    data-bs-dismiss="modal">
+                                checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="checkout" className="modal fade"
+                 aria-hidden="true" aria-labelledby="checkout"
+                 tabIndex="-1">
+                <div className="modal-dialog modal-fullscreen">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h2 className="modal-title">
+                                Checkout
+                            </h2>
+                            <button type="button"
+                                    className="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"/>
+                        </div>
+                        <div className="modal-body">
+                            Hide this modal and show the first with the button below.
+                        </div>
+                        <div className="modal-footer">
+                            <button className="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#cart"
+                                    data-bs-dismiss="modal">
+                                back to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header">
+                <div id="header__container" className="container">
+                    <img src={logo} alt="logo"
+                         id="header__container__logo"/>
+                    <h1 id="header__container__title">
+                        Merch Store
+                    </h1>
+                </div>
+            </header>
             <section id="section-book">
                 <div className="container">
                     <h2>
