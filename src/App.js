@@ -24,13 +24,12 @@ function App() {
                     </button>
                     <img src={icon} alt="icon"
                          className="navbar-brand"/>
-                    <button type="button"
-                            className="btn"
-                            data-bs-toggle="offcanvas" data-bs-target="#cart"
-                            aria-controls="cart">
+                    <div className="btn"
+                         data-bs-toggle="offcanvas" data-bs-target="#cart"
+                         aria-controls="cart">
                         <img src={cart} alt="cart icon"/>
                         <span>(USD $19.95)</span>
-                    </button>
+                    </div>
                     <div id="navbar__container__menu"
                          className="collapse navbar-collapse">
                         <ul className="navbar-nav">
