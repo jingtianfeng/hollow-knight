@@ -2,8 +2,11 @@ import "./App.sass"
 import icon from './img/icon/black-64.png'
 import cart from '@streamlinehq/streamlinehq/img/streamline-light/shopping-ecommerce/carts/shopping-cart-1.svg'
 import logo from './img/logo.png'
-import BookPiano from "./BookPiano";
-import BookJournal from "./BookJournal";
+import piano1 from './img/book/piano-collection-1.png'
+import piano2 from './img/book/piano-collection-2.png'
+import journal1 from "./img/book/wanderer-journal-1.png";
+import journal2 from "./img/book/wanderer-journal-2.png";
+import journal3 from "./img/book/wanderer-journal-3.png";
 import vinylGN2 from "./img/vinyl/gods-nightmares-2.png"
 import vinylOriginal2 from "./img/vinyl/original-2.png"
 import myla from "./img/myla.png"
@@ -103,8 +106,148 @@ function App() {
                     <h2>
                         Books
                     </h2>
-                    <BookPiano/>
-                    <BookJournal/>
+                    <div id="piano">
+                        <div id="piano__carousel" className="carousel slide"
+                             data-bs-interval="false" data-bs-wrap="true">
+                            <div className="carousel-indicators">
+                                <button type="button"
+                                        className="active rounded-circle"
+                                        data-bs-target="#piano__carousel" data-bs-slide-to="0"
+                                        aria-current="true" aria-label="Slide 1"/>
+                                <button type="button" className="rounded-circle"
+                                        data-bs-target="#piano__carousel" data-bs-slide-to="1"
+                                        aria-label="Slide 2"/>
+                            </div>
+                            <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                    <img src={piano1} className="d-block w-100" alt="book front"/>
+                                </div>
+                                <div className="carousel-item">
+                                    <img src={piano2} className="d-block w-100" alt="book back"/>
+                                </div>
+                            </div>
+                            <button className="carousel-control-prev" type="button"
+                                    data-bs-target="#piano__carousel" data-bs-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"/>
+                                <span className="visually-hidden">Previous</span>
+                            </button>
+                            <button className="carousel-control-next" type="button"
+                                    data-bs-target="#piano__carousel" data-bs-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"/>
+                                <span className="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div id="piano__form">
+                            <h3 id="piano__form__title">
+                                Piano Collections
+                            </h3>
+                            <div id="piano__form__description">
+                                <p>
+                                    Includes sheet music for the following songs:
+                                </p>
+                                <ol>
+                                    <li>Dirtmouth</li>
+                                    <li>Crossroads</li>
+                                    <li>Greenpath</li>
+                                    <li>Hornet</li>
+                                    <li>Reflection</li>
+                                    <li>Mantis Lords</li>
+                                    <li>City of Tears</li>
+                                    <li>Resting Grounds</li>
+                                    <li>Dung Defender</li>
+                                    <li>Queen's Gardens</li>
+                                    <li>White Palace</li>
+                                    <li>Sealed Vessel</li>
+                                    <li>Radiance</li>
+                                    <li>Hollow Knight</li>
+                                    <li>Grimm Troupe</li>
+                                </ol>
+                            </div>
+                            <label htmlFor="piano__form__number">
+                                QTY (max. 5)
+                            </label>
+                            <input type="number" min="1" max="5"
+                                   id="piano__form__number"/>
+                            <div id="piano__form__price">
+                                $25 x 1 = $25
+                            </div>
+                            <button type="button"
+                                    id="piano__form__button">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div id="journal">
+                        <div id="journal__carousel" className="carousel slide"
+                             data-bs-interval="false" data-bs-wrap="true">
+                            <div className="carousel-indicators">
+                                <button type="button" className="active rounded-circle"
+                                        data-bs-target="#journal__carousel" data-bs-slide-to="0"
+                                        aria-current="true" aria-label="Slide 1"/>
+                                <button type="button" className="rounded-circle"
+                                        data-bs-target="#journal__carousel" data-bs-slide-to="1"
+                                        aria-label="Slide 2"/>
+                                <button type="button" className="rounded-circle"
+                                        data-bs-target="#journal__carousel" data-bs-slide-to="2"
+                                        aria-label="Slide 3"/>
+                            </div>
+                            <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                    <img src={journal1} className="d-block w-100" alt="book front"/>
+                                </div>
+                                <div className="carousel-item">
+                                    <img src={journal2} className="d-block w-100" alt="book back"/>
+                                </div>
+                                <div className="carousel-item">
+                                    <img src={journal3} className="d-block w-100" alt="book inside"/>
+                                </div>
+                            </div>
+                            <button className="carousel-control-prev" type="button"
+                                    data-bs-target="#journal__carousel" data-bs-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"/>
+                                <span className="visually-hidden">Previous</span>
+                            </button>
+                            <button className="carousel-control-next" type="button"
+                                    data-bs-target="#journal__carousel" data-bs-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"/>
+                                <span className="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div id="journal__form">
+                            <h3 id="journal__form__title">
+                                Wanderer's Journal
+                            </h3>
+                            <div id="journal__form__description">
+                                <p>
+                                    Art book features:
+                                </p>
+                                <ul>
+                                    <li>
+                                        A comprehensive guide to all of Hallownest's varied environments
+                                    </li>
+                                    <li>
+                                        Friendly faces, fearsome foes, flora, fauna and fungi
+                                    </li>
+                                    <li>
+                                        A void-black faux leather cover with silver and blue foil that shines like a
+                                        Lumafly Lantern
+                                    </li>
+                                </ul>
+                            </div>
+                            <label htmlFor="journal__form__number">
+                                QTY (max. 5)
+                            </label>
+                            <input type="number" min="1" max="5"
+                                   id="journal__form__number"/>
+                            <div id="journal__form__price">
+                                $29 x 1 = $29
+                            </div>
+                            <button type="button"
+                                    id="journal__form__button">
+                                add to cart
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="section-coming">

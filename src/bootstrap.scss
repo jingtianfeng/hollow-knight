@@ -5,6 +5,15 @@
 $font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
 $line-height-base: 1.625;
 
+$carousel-control-prev-icon-bg: url("/img/left.png");
+$carousel-control-icon-width: 50px;
+$carousel-control-next-icon-bg: url("/img/right.png");
+$carousel-indicator-height: 16px;
+$carousel-indicator-width: 16px;
+$carousel-indicator-opacity: 0.3;
+$carousel-indicator-active-opacity: 0.6;
+$carousel-transition-duration: 0.5s;
+
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
