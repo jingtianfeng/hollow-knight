@@ -2,14 +2,19 @@ import "./App.sass"
 import icon from './img/icon/black-64.png'
 import cart from '@streamlinehq/streamlinehq/img/streamline-light/shopping-ecommerce/carts/shopping-cart-1.svg'
 import logo from './img/logo.png'
+import hrTop from './img/hr2.png'
+import hrBottom from './img/hr-bottom.png'
 import piano1 from './img/book/piano-collection-1.png'
 import piano2 from './img/book/piano-collection-2.png'
-import journal1 from "./img/book/wanderer-journal-1.png";
-import journal2 from "./img/book/wanderer-journal-2.png";
-import journal3 from "./img/book/wanderer-journal-3.png";
-import vinylGN2 from "./img/vinyl/gods-nightmares-2.png"
-import vinylOriginal2 from "./img/vinyl/original-2.png"
-import myla from "./img/myla.png"
+import journal1 from './img/book/wanderer-journal-1.png'
+import journal2 from './img/book/wanderer-journal-2.png'
+import journal3 from './img/book/wanderer-journal-3.png'
+import guide from './img/illustration-guide.png'
+import monster from './img/illustration-monster.png'
+import lantern from './img/illustration-lantern.png'
+import vinylGN2 from './img/vinyl/gods-nightmares-2.png'
+import vinylOriginal2 from './img/vinyl/original-2.png'
+import myla from './img/myla.png'
 
 function App() {
     return (
@@ -145,6 +150,7 @@ function App() {
                                 <p>
                                     Includes sheet music for the following songs:
                                 </p>
+                                <img src={hrTop} alt="hr"/>
                                 <ol>
                                     <li>Dirtmouth</li>
                                     <li>Crossroads</li>
@@ -162,6 +168,7 @@ function App() {
                                     <li>Hollow Knight</li>
                                     <li>Grimm Troupe</li>
                                 </ol>
+                                <img src={hrBottom} alt="hr"/>
                             </div>
                             <label htmlFor="piano__form__number">
                                 QTY (max. 5)
@@ -221,18 +228,24 @@ function App() {
                                 <p>
                                     Art book features:
                                 </p>
-                                <ul>
-                                    <li>
-                                        A comprehensive guide to all of Hallownest's varied environments
-                                    </li>
-                                    <li>
-                                        Friendly faces, fearsome foes, flora, fauna and fungi
-                                    </li>
-                                    <li>
-                                        A void-black faux leather cover with silver and blue foil that shines like a
-                                        Lumafly Lantern
-                                    </li>
-                                </ul>
+                                <img src={hrTop} alt="hr"/>
+                                <img src={guide} alt="guide"
+                                     className="rounded"/>
+                                <p>
+                                    A comprehensive guide to all of Hallownest's varied environments
+                                </p>
+                                <img src={monster} alt="monster"
+                                     className="rounded"/>
+                                <p>
+                                    Friendly faces, fearsome foes, flora, fauna and fungi
+                                </p>
+                                <img src={lantern} alt="lantern"
+                                     className="rounded"/>
+                                <p>
+                                    A void-black faux leather cover with silver and blue foil that shines like a
+                                    Lumafly Lantern
+                                </p>
+                                <img src={hrBottom} alt="hr"/>
                             </div>
                             <label htmlFor="journal__form__number">
                                 QTY (max. 5)
