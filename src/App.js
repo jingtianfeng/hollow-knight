@@ -9,9 +9,9 @@ import piano2 from './img/book/piano-collection-2.png'
 import journal1 from './img/book/wanderer-journal-1.png'
 import journal2 from './img/book/wanderer-journal-2.png'
 import journal3 from './img/book/wanderer-journal-3.png'
-import guide from './img/illustration-guide.png'
-import monster from './img/illustration-monster.png'
-import lantern from './img/illustration-lantern.png'
+import guide from './img/illustration-guide2.webp'
+import monster from './img/illustration-monster2.webp'
+import feather from './img/illustration-feather.webp'
 import vinylGN2 from './img/vinyl/gods-nightmares-2.png'
 import vinylOriginal2 from './img/vinyl/original-2.png'
 import myla from './img/myla.png'
@@ -239,7 +239,7 @@ function App() {
                                 <p>
                                     Friendly faces, fearsome foes, flora, fauna and fungi
                                 </p>
-                                <img src={lantern} alt="lantern"
+                                <img src={feather} alt="feather"
                                      className="rounded"/>
                                 <p>
                                     A void-black faux leather cover with silver and blue foil that shines like a
