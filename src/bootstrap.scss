@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Quattrocento:wght@400;700&display=swap');
 
 @import "~bootstrap/scss/functions";
 
-$font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
-$line-height-base: 1.625;
+$font-family-sans-serif: "Quattrocento", "Helvetica Neue", sans-serif;
+$line-height-base: 1.75;
+$headings-font-family: "Cinzel";
+$headings-font-weight: 500;
+$display-font-weight: 400;
 
 $carousel-control-prev-icon-bg: url("/img/left.png");
 $carousel-control-icon-width: 50px;
@@ -12,7 +15,7 @@ $carousel-indicator-height: 16px;
 $carousel-indicator-width: 16px;
 $carousel-indicator-opacity: 0.3;
 $carousel-indicator-active-opacity: 0.6;
-$carousel-indicator-spacer: 6px;
+$carousel-indicator-spacer: 4px;
 $carousel-transition-duration: 0.5s;
 
 @import "~bootstrap/scss/variables";

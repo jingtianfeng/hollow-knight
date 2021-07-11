@@ -101,7 +101,8 @@ function App() {
                 <div id="header__container" className="container">
                     <img src={logo} alt="logo"
                          id="header__container__logo"/>
-                    <h1 id="header__container__title">
+                    <h1 id="header__container__title"
+                        className="display-1">
                         Merch Store
                     </h1>
                 </div>
@@ -143,12 +144,13 @@ function App() {
                             </button>
                         </div>
                         <div id="piano__form">
-                            <h3 id="piano__form__title">
+                            <h3 id="piano__form__title"
+                                className="h2">
                                 Piano Collections
                             </h3>
                             <div id="piano__form__description">
                                 <p>
-                                    Includes sheet music for the following songs:
+                                    Include sheet music for the following songs:
                                 </p>
                                 <img src={hrTop} alt="hr"/>
                                 <ol>
@@ -221,7 +223,8 @@ function App() {
                             </button>
                         </div>
                         <div id="journal__form">
-                            <h3 id="journal__form__title">
+                            <h3 id="journal__form__title"
+                                className="h2">
                                 Wanderer's Journal
                             </h3>
                             <div id="journal__form__description">
@@ -265,8 +268,8 @@ function App() {
             </section>
             <section id="section-coming">
                 <div className="container">
-                    <h2>
-                        Vinyls Coming Soon!
+                    <h2 className="h2">
+                        Coming Soon
                     </h2>
                     <p>
                         (placeholder)
@@ -293,17 +296,19 @@ function App() {
             </section>
             <footer id="footer">
                 <div className="container">
-                    <img src={myla} alt="myla wants you to join our newsletter"
+                    <img src={myla} alt="join our newsletter"
                          className=""/>
                     <form action="/"
                           id="newsletter">
                         <label htmlFor="newsletter__input"
-                               className="">
+                               className="h2">
                             Join our newsletter!
                         </label>
                         <input type="email" placeholder="myla@hallownest.com"
                                id="newsletter__input"/>
-                        <button>sign up</button>
+                        <button>
+                            sign up
+                        </button>
                     </form>
                     <p id="signature">
                         Made with ♥ by JT Feng
