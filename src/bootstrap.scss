@@ -21,8 +21,15 @@ $carousel-transition-duration: 0.5s;
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-$body-bg: $cyan-900;
-$body-color: $cyan-200;
+$body-bg: $gray-900;
+$body-color: $gray-200;
+
+$navbar-nav-link-padding-x: 20px;
+$navbar-dark-color: rgba($body-color, .55);
+$navbar-dark-hover-color: rgba($body-color, .75);
+$navbar-dark-active-color: $body-color;
+$navbar-dark-disabled-color: rgba($body-color, .25);
+$navbar-dark-toggler-border-color: rgba($body-color, .1);
 
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";

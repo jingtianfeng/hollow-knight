@@ -1,5 +1,5 @@
 import "./App.sass"
-import icon from './img/icon/white-64.png'
+import icon from './img/icon/white-32.png'
 import logo from './img/logo.png'
 import hrTop from './img/hr2.png'
 import hrBottom from './img/hr-bottom.png'
@@ -18,9 +18,11 @@ import myla from './img/myla.png'
 function App() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-                <div className="container">
-                    <button className="navbar-toggler fs-6 border-0"
+            <nav id="navbar"
+                 className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+                <div id="navbar__container" className="container">
+                    <button id="navbar__container__toggler"
+                            className="navbar-toggler fs-6 border-0"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbar__container__menu"
@@ -30,12 +32,14 @@ function App() {
                         MENU
                     </button>
                     <img src={icon} alt="icon"
+                         id="navbar__container__icon"
                          className="navbar-brand me-0"/>
-                    <div className="btn position-relative order-lg-3"
+                    <div id="navbar__container__cart"
+                         className="navbar-text btn position-relative order-lg-3"
                          data-bs-toggle="offcanvas" data-bs-target="#cart"
                          aria-controls="cart">
                         CART
-                        <span className="badge rounded-pill
+                        <span className="badge rounded-pill text-body
                                          position-absolute top-0 start-100 translate-middle-x">
                             1
                             <span className="visually-hidden">number of items in shopping cart</span>
@@ -43,7 +47,7 @@ function App() {
                     </div>
                     <div id="navbar__container__menu"
                          className="collapse navbar-collapse justify-content-lg-center">
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav navbar-nav-scroll mx-2 my-2">
                             <li className="nav-item">
                                 <a href="#top" className="nav-link">Home</a>
                             </li>
