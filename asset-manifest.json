@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hollow-knight/static/css/main.244e4d7d.chunk.css",
-    "main.js": "/hollow-knight/static/js/main.494713ba.chunk.js",
-    "main.js.map": "/hollow-knight/static/js/main.494713ba.chunk.js.map",
-    "runtime-main.js": "/hollow-knight/static/js/runtime-main.e39b2733.js",
-    "runtime-main.js.map": "/hollow-knight/static/js/runtime-main.e39b2733.js.map",
-    "static/js/2.be1020b2.chunk.js": "/hollow-knight/static/js/2.be1020b2.chunk.js",
-    "static/js/2.be1020b2.chunk.js.map": "/hollow-knight/static/js/2.be1020b2.chunk.js.map",
-    "static/js/3.21def247.chunk.js": "/hollow-knight/static/js/3.21def247.chunk.js",
-    "static/js/3.21def247.chunk.js.map": "/hollow-knight/static/js/3.21def247.chunk.js.map",
+    "main.js": "/hollow-knight/static/js/main.385ec2a2.chunk.js",
+    "main.js.map": "/hollow-knight/static/js/main.385ec2a2.chunk.js.map",
+    "runtime-main.js": "/hollow-knight/static/js/runtime-main.d609d924.js",
+    "runtime-main.js.map": "/hollow-knight/static/js/runtime-main.d609d924.js.map",
+    "static/js/2.7e02dc8f.chunk.js": "/hollow-knight/static/js/2.7e02dc8f.chunk.js",
+    "static/js/2.7e02dc8f.chunk.js.map": "/hollow-knight/static/js/2.7e02dc8f.chunk.js.map",
+    "static/js/3.3a20d289.chunk.js": "/hollow-knight/static/js/3.3a20d289.chunk.js",
+    "static/js/3.3a20d289.chunk.js.map": "/hollow-knight/static/js/3.3a20d289.chunk.js.map",
     "index.html": "/hollow-knight/index.html",
     "static/css/main.244e4d7d.chunk.css.map": "/hollow-knight/static/css/main.244e4d7d.chunk.css.map",
-    "static/js/2.be1020b2.chunk.js.LICENSE.txt": "/hollow-knight/static/js/2.be1020b2.chunk.js.LICENSE.txt",
+    "static/js/2.7e02dc8f.chunk.js.LICENSE.txt": "/hollow-knight/static/js/2.7e02dc8f.chunk.js.LICENSE.txt",
     "static/media/App.sass": "/hollow-knight/static/media/banner.b53230a8.png",
     "static/media/gods-nightmares-2.f2f6d779.png": "/hollow-knight/static/media/gods-nightmares-2.f2f6d779.png",
     "static/media/illustration-feather.7dde3ca8.webp": "/hollow-knight/static/media/illustration-feather.7dde3ca8.webp",
@@ -22,15 +22,14 @@
     "static/media/original-2.4e398779.png": "/hollow-knight/static/media/original-2.4e398779.png",
     "static/media/piano-collection-1.df36c0aa.png": "/hollow-knight/static/media/piano-collection-1.df36c0aa.png",
     "static/media/piano-collection-2.f42e309c.png": "/hollow-knight/static/media/piano-collection-2.f42e309c.png",
-    "static/media/shopping-cart-1.svg": "/hollow-knight/static/media/shopping-cart-1.7a0ffb0b.svg",
     "static/media/wanderer-journal-1.29b8b45c.png": "/hollow-knight/static/media/wanderer-journal-1.29b8b45c.png",
     "static/media/wanderer-journal-2.b0cc349f.png": "/hollow-knight/static/media/wanderer-journal-2.b0cc349f.png",
     "static/media/wanderer-journal-3.9580669b.png": "/hollow-knight/static/media/wanderer-journal-3.9580669b.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e39b2733.js",
-    "static/js/2.be1020b2.chunk.js",
+    "static/js/runtime-main.d609d924.js",
+    "static/js/2.7e02dc8f.chunk.js",
     "static/css/main.244e4d7d.chunk.css",
-    "static/js/main.494713ba.chunk.js"
+    "static/js/main.385ec2a2.chunk.js"
   ]
 }
