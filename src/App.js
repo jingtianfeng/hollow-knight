@@ -1,6 +1,5 @@
 import "./App.sass"
-import icon from './img/icon/black-64.png'
-import cart from '@streamlinehq/streamlinehq/img/streamline-light/shopping-ecommerce/carts/shopping-cart-1.svg'
+import icon from './img/icon/white-64.png'
 import logo from './img/logo.png'
 import hrTop from './img/hr2.png'
 import hrBottom from './img/hr-bottom.png'
@@ -19,30 +18,43 @@ import myla from './img/myla.png'
 function App() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div className="container">
-                    <button className="navbar-toggler"
+                    <button className="navbar-toggler fs-6 border-0"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbar__container__menu"
                             aria-controls="navbar__container__menu"
                             aria-expanded="false"
                             aria-label="toggle navigation">
-                        <span className="navbar-toggler-icon"/>
+                        MENU
                     </button>
                     <img src={icon} alt="icon"
-                         className="navbar-brand"/>
-                    <div className="btn"
+                         className="navbar-brand me-0"/>
+                    <div className="btn position-relative order-lg-3"
                          data-bs-toggle="offcanvas" data-bs-target="#cart"
                          aria-controls="cart">
-                        <img src={cart} alt="cart icon"/>
-                        <span>(USD $19.95)</span>
+                        CART
+                        <span className="badge rounded-pill
+                                         position-absolute top-0 start-100 translate-middle-x">
+                            1
+                            <span className="visually-hidden">number of items in shopping cart</span>
+                        </span>
                     </div>
                     <div id="navbar__container__menu"
-                         className="collapse navbar-collapse">
+                         className="collapse navbar-collapse justify-content-lg-center">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a href="/" className="nav-link">Home</a>
+                                <a href="#top" className="nav-link">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#section-book" className="nav-link">Books</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#section-coming" className="nav-link">Coming Soon</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="#footer" className="nav-link">Newsletter</a>
                             </li>
                         </ul>
                     </div>
