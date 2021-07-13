@@ -8,11 +8,32 @@ $headings-font-family: "Cinzel";
 $headings-font-weight: 500;
 $display-font-weight: 400;
 
+$gray: #404abf;
+$gray-100: tint-color($gray, 80%);
+$gray-200: tint-color($gray, 60%);
+$gray-300: tint-color($gray, 40%);
+$gray-400: tint-color($gray, 20%);
+$gray-500: $gray;
+$gray-600: shade-color($gray, 20%);
+$gray-700: shade-color($gray, 40%);
+$gray-800: shade-color($gray, 60%);
+$gray-900: shade-color($gray, 80%);
+
+$body-bg: $gray-900;
+$body-color: $gray-100;
+
+$navbar-nav-link-padding-x: 20px;
+$navbar-dark-color: rgba($body-color, .75);
+$navbar-dark-hover-color: rgba($body-color, 1);
+$navbar-dark-active-color: $body-color;
+$navbar-dark-disabled-color: rgba($body-color, .25);
+$navbar-dark-toggler-border-color: rgba($body-color, .1);
+
 $carousel-control-prev-icon-bg: url("/img/left.png");
 $carousel-control-icon-width: 50px;
 $carousel-control-next-icon-bg: url("/img/right.png");
-$carousel-indicator-height: 16px;
-$carousel-indicator-width: 16px;
+$carousel-indicator-height: 14px;
+$carousel-indicator-width: 14px;
 $carousel-indicator-opacity: 0.3;
 $carousel-indicator-active-opacity: 0.6;
 $carousel-indicator-spacer: 4px;
@@ -20,16 +41,6 @@ $carousel-transition-duration: 0.5s;
 
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-
-$body-bg: $gray-900;
-$body-color: $gray-200;
-
-$navbar-nav-link-padding-x: 20px;
-$navbar-dark-color: rgba($body-color, .55);
-$navbar-dark-hover-color: rgba($body-color, .75);
-$navbar-dark-active-color: $body-color;
-$navbar-dark-disabled-color: rgba($body-color, .25);
-$navbar-dark-toggler-border-color: rgba($body-color, .1);
 
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
