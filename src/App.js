@@ -47,7 +47,8 @@ function App() {
                     </div>
                     <div id="navbar__container__menu"
                          className="collapse navbar-collapse justify-content-lg-center">
-                        <ul className="navbar-nav navbar-nav-scroll mx-2 my-2">
+                        <ul id="navbar__container__menu__nav"
+                            className="navbar-nav navbar-nav-scroll m-lg-0">
                             <li className="nav-item">
                                 <a href="#top" className="nav-link">Home</a>
                             </li>
