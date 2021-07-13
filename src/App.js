@@ -114,12 +114,14 @@ function App() {
                     </div>
                 </div>
             </div>
-            <header id="header">
+            <header id="header"
+                    className="border-bottom py-5">
                 <div id="header__container" className="container">
                     <img src={logo} alt="logo"
-                         id="header__container__logo"/>
+                         id="header__container__logo"
+                         className="d-block img-fluid mx-auto mb-3"/>
                     <h1 id="header__container__title"
-                        className="display-1">
+                        className="h1 text-white text-center">
                         Merch Store
                     </h1>
                 </div>
