@@ -171,8 +171,9 @@ function App() {
                                 <p>
                                     Include sheet music for the following songs:
                                 </p>
-                                <img src={hrTop} alt="hr"/>
-                                <ol>
+                                <img src={hrTop} alt="hr"
+                                     className="w-100"/>
+                                <ol className="m-0 py-5 fs-4 d-md-flex flex-md-column flex-md-wrap">
                                     <li>Dirtmouth</li>
                                     <li>Crossroads</li>
                                     <li>Greenpath</li>
@@ -189,7 +190,8 @@ function App() {
                                     <li>Hollow Knight</li>
                                     <li>Grimm Troupe</li>
                                 </ol>
-                                <img src={hrBottom} alt="hr"/>
+                                <img src={hrBottom} alt="hr"
+                                     className="w-100"/>
                             </div>
                             <label htmlFor="piano__form__number">
                                 QTY (max. 5)
@@ -250,24 +252,37 @@ function App() {
                                 <p>
                                     Art book features:
                                 </p>
-                                <img src={hrTop} alt="hr"/>
-                                <img src={guide} alt="guide"
-                                     className="rounded"/>
-                                <p>
-                                    A comprehensive guide to all of Hallownest's varied environments
-                                </p>
-                                <img src={monster} alt="monster"
-                                     className="rounded"/>
-                                <p>
-                                    Friendly faces, fearsome foes, flora, fauna and fungi
-                                </p>
-                                <img src={feather} alt="feather"
-                                     className="rounded"/>
-                                <p>
-                                    A void-black faux leather cover with silver and blue foil that shines like a
-                                    Lumafly Lantern
-                                </p>
-                                <img src={hrBottom} alt="hr"/>
+                                <img src={hrTop} alt="hr"
+                                     className="w-100"/>
+                                <div className="py-5">
+                                    <div className="d-md-flex flex-md-nowrap align-items-md-center">
+                                        <img src={guide} alt="guide"
+                                             className="d-block mx-auto mx-md-0"
+                                             style={{height: 160, width: 160}}/>
+                                        <p className="text-center text-md-start ms-md-5 fs-4 mt-3 mt-md-0">
+                                            A comprehensive guide to all of Hallownest's varied environments
+                                        </p>
+                                    </div>
+                                    <div className="d-md-flex flex-md-nowrap align-items-md-center mt-5">
+                                        <img src={monster} alt="monster"
+                                             className="d-block mx-auto mx-md-0"
+                                             style={{height: 160, width: 160}}/>
+                                        <p className="text-center text-md-start ms-md-5 fs-4 mt-3 mt-md-0">
+                                            Friendly faces, fearsome foes, flora, fauna and fungi
+                                        </p>
+                                    </div>
+                                    <div className="d-md-flex flex-md-nowrap align-items-md-center mt-5">
+                                        <img src={feather} alt="feather"
+                                             className="d-block mx-auto mx-md-0"
+                                             style={{height: 160, width: 160}}/>
+                                        <p className="text-center text-md-start ms-md-5 fs-4 mt-3 mt-md-0">
+                                            A void-black faux leather cover with silver and blue foil that shines like a
+                                            Lumafly Lantern
+                                        </p>
+                                    </div>
+                                </div>
+                                <img src={hrBottom} alt="hr"
+                                     className="w-100"/>
                             </div>
                             <label htmlFor="journal__form__number">
                                 QTY (max. 5)
@@ -293,22 +308,24 @@ function App() {
                     <p>
                         (placeholder)
                     </p>
-                    <div className="card">
-                        <img src={vinylGN2} alt="vinyl - gods and nightmares soundtrack"
-                             className="card-img"/>
-                        <div className="card-img-overlay">
-                            <p className="card-text">
-                                Gods & Nightmares
-                            </p>
+                    <div className="row">
+                        <div className="card">
+                            <img src={vinylGN2} alt="vinyl - gods and nightmares soundtrack"
+                                 className="card-img"/>
+                            <div className="card-img-overlay">
+                                <p className="card-text">
+                                    Gods & Nightmares
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="card">
-                        <img src={vinylOriginal2} alt="vinyl - original soundtrack"
-                             className="card-img"/>
-                        <div className="card-img-overlay">
-                            <p className="card-text">
-                                Original
-                            </p>
+                        <div className="card">
+                            <img src={vinylOriginal2} alt="vinyl - original soundtrack"
+                                 className="card-img"/>
+                            <div className="card-img-overlay">
+                                <p className="card-text">
+                                    Original
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -316,7 +333,7 @@ function App() {
             <footer id="footer">
                 <div className="container">
                     <img src={myla} alt="join our newsletter"
-                         className=""/>
+                         className="img-fluid"/>
                     <form action="/"
                           id="newsletter">
                         <label htmlFor="newsletter__input"
