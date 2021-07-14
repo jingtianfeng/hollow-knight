@@ -100,3 +100,12 @@ $utilities: (
 @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/offcanvas";
+
+#piano__form__description__list {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 300px;
+  }
+}

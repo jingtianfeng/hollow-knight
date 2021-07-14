@@ -173,7 +173,8 @@ function App() {
                                 </p>
                                 <img src={hrTop} alt="hr"
                                      className="w-100"/>
-                                <ol className="m-0 py-5 fs-4 d-md-flex flex-md-column flex-md-wrap">
+                                <ol id="piano__form__description__list"
+                                    className="m-0 py-5 fs-5">
                                     <li>Dirtmouth</li>
                                     <li>Crossroads</li>
                                     <li>Greenpath</li>
@@ -259,7 +260,7 @@ function App() {
                                         <img src={guide} alt="guide"
                                              className="d-block mx-auto mx-md-0"
                                              style={{height: 160, width: 160}}/>
-                                        <p className="text-center text-md-start ms-md-5 fs-4 mt-3 mt-md-0">
+                                        <p className="mb-0 text-center text-md-start ms-md-5 fs-5 mt-3 mt-md-0">
                                             A comprehensive guide to all of Hallownest's varied environments
                                         </p>
                                     </div>
@@ -267,7 +268,7 @@ function App() {
                                         <img src={monster} alt="monster"
                                              className="d-block mx-auto mx-md-0"
                                              style={{height: 160, width: 160}}/>
-                                        <p className="text-center text-md-start ms-md-5 fs-4 mt-3 mt-md-0">
+                                        <p className="mb-0 text-center text-md-start ms-md-5 fs-5 mt-3 mt-md-0">
                                             Friendly faces, fearsome foes, flora, fauna and fungi
                                         </p>
                                     </div>
@@ -275,7 +276,7 @@ function App() {
                                         <img src={feather} alt="feather"
                                              className="d-block mx-auto mx-md-0"
                                              style={{height: 160, width: 160}}/>
-                                        <p className="text-center text-md-start ms-md-5 fs-4 mt-3 mt-md-0">
+                                        <p className="mb-0 text-center text-md-start ms-md-5 fs-5 mt-3 mt-md-0">
                                             A void-black faux leather cover with silver and blue foil that shines like a
                                             Lumafly Lantern
                                         </p>
