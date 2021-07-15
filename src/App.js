@@ -132,7 +132,7 @@ function App() {
                         Books
                     </h2>
                     <div id="piano"
-                         className="row align-content-lg-center gy-5 gx-5 py-5">
+                         className="row gy-5 gx-7 py-5">
                         <div className="col-12 col-lg-5">
                             <div id="piano__carousel"
                                  className="carousel slide"
@@ -212,7 +212,7 @@ function App() {
                         </div>
                     </div>
                     <div id="journal"
-                         className="row align-content-lg-center gy-5 gx-5 py-5">
+                         className="row gy-5 gx-7 py-5">
                         <div className="col-12 col-lg-5">
                             <div id="journal__carousel" className="carousel slide"
                                  data-bs-interval="false" data-bs-wrap="true">

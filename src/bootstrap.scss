@@ -2,6 +2,18 @@
 
 @import "~bootstrap/scss/functions";
 
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+        6: $spacer * 4.5,
+        7: $spacer * 6,
+);
+
 $font-family-sans-serif: "Quattrocento", "Helvetica Neue", sans-serif;
 $line-height-base: 1.75;
 $headings-font-family: "Cinzel";
@@ -44,11 +56,6 @@ $carousel-transition-duration: 0.5s;
 
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
-
-$spacers: map-merge($spacers, (
-        6: $spacer * 4.5,
-        7: $spacer * 6,
-));
 
 $letter-spacings: (
         1: 0.01em,
