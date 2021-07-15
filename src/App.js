@@ -35,7 +35,7 @@ function App() {
                          id="navbar__container__icon"
                          className="navbar-brand me-0"/>
                     <div id="navbar__container__cart"
-                         className="navbar-text btn position-relative order-lg-3"
+                         className="navbar-text btn position-relative order-lg-last"
                          data-bs-toggle="offcanvas" data-bs-target="#cart"
                          aria-controls="cart">
                         CART
@@ -131,50 +131,53 @@ function App() {
                     <h2>
                         Books
                     </h2>
-                    <div id="piano">
-                        <div id="piano__carousel" className="carousel slide"
-                             data-bs-interval="false" data-bs-wrap="true">
-                            <div className="carousel-indicators">
-                                <button type="button"
-                                        className="active rounded-circle"
-                                        data-bs-target="#piano__carousel" data-bs-slide-to="0"
-                                        aria-current="true" aria-label="Slide 1"/>
-                                <button type="button" className="rounded-circle"
-                                        data-bs-target="#piano__carousel" data-bs-slide-to="1"
-                                        aria-label="Slide 2"/>
-                            </div>
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <img src={piano1} className="d-block w-100" alt="book front"/>
+                    <div id="piano"
+                         className="row align-content-lg-center gy-5 gx-5 py-5">
+                        <div className="col-12 col-lg-5">
+                            <div id="piano__carousel"
+                                 className="carousel slide"
+                                 data-bs-interval="false" data-bs-wrap="true">
+                                <div className="carousel-indicators">
+                                    <button type="button"
+                                            className="active rounded-circle"
+                                            data-bs-target="#piano__carousel" data-bs-slide-to="0"
+                                            aria-current="true" aria-label="Slide 1"/>
+                                    <button type="button" className="rounded-circle"
+                                            data-bs-target="#piano__carousel" data-bs-slide-to="1"
+                                            aria-label="Slide 2"/>
                                 </div>
-                                <div className="carousel-item">
-                                    <img src={piano2} className="d-block w-100" alt="book back"/>
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <img src={piano1} className="d-block w-100" alt="book front"/>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src={piano2} className="d-block w-100" alt="book back"/>
+                                    </div>
                                 </div>
+                                <button className="carousel-control-prev" type="button"
+                                        data-bs-target="#piano__carousel" data-bs-slide="prev">
+                                    <span className="carousel-control-prev-icon" aria-hidden="true"/>
+                                    <span className="visually-hidden">Previous</span>
+                                </button>
+                                <button className="carousel-control-next" type="button"
+                                        data-bs-target="#piano__carousel" data-bs-slide="next">
+                                    <span className="carousel-control-next-icon" aria-hidden="true"/>
+                                    <span className="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            <button className="carousel-control-prev" type="button"
-                                    data-bs-target="#piano__carousel" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"/>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button"
-                                    data-bs-target="#piano__carousel" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"/>
-                                <span className="visually-hidden">Next</span>
-                            </button>
                         </div>
-                        <div id="piano__form">
+                        <div id="piano__form"
+                             className="col-12 col-lg-7">
                             <h3 id="piano__form__title"
-                                className="h2">
+                                className="h3 text-center">
                                 Piano Collections
                             </h3>
-                            <div id="piano__form__description">
-                                <p>
-                                    Include sheet music for the following songs:
-                                </p>
+                            <div id="piano__form__description"
+                                 className="my-4">
                                 <img src={hrTop} alt="hr"
                                      className="w-100"/>
                                 <ol id="piano__form__description__list"
-                                    className="m-0 py-5 fs-5">
+                                    className="m-0 py-4 ps-5 ps-md-6">
                                     <li>Dirtmouth</li>
                                     <li>Crossroads</li>
                                     <li>Greenpath</li>
@@ -208,75 +211,80 @@ function App() {
                             </button>
                         </div>
                     </div>
-                    <div id="journal">
-                        <div id="journal__carousel" className="carousel slide"
-                             data-bs-interval="false" data-bs-wrap="true">
-                            <div className="carousel-indicators">
-                                <button type="button" className="active rounded-circle"
-                                        data-bs-target="#journal__carousel" data-bs-slide-to="0"
-                                        aria-current="true" aria-label="Slide 1"/>
-                                <button type="button" className="rounded-circle"
-                                        data-bs-target="#journal__carousel" data-bs-slide-to="1"
-                                        aria-label="Slide 2"/>
-                                <button type="button" className="rounded-circle"
-                                        data-bs-target="#journal__carousel" data-bs-slide-to="2"
-                                        aria-label="Slide 3"/>
+                    <div id="journal"
+                         className="row align-content-lg-center gy-5 gx-5 py-5">
+                        <div className="col-12 col-lg-5">
+                            <div id="journal__carousel" className="carousel slide"
+                                 data-bs-interval="false" data-bs-wrap="true">
+                                <div className="carousel-indicators">
+                                    <button type="button" className="active rounded-circle"
+                                            data-bs-target="#journal__carousel" data-bs-slide-to="0"
+                                            aria-current="true" aria-label="Slide 1"/>
+                                    <button type="button" className="rounded-circle"
+                                            data-bs-target="#journal__carousel" data-bs-slide-to="1"
+                                            aria-label="Slide 2"/>
+                                    <button type="button" className="rounded-circle"
+                                            data-bs-target="#journal__carousel" data-bs-slide-to="2"
+                                            aria-label="Slide 3"/>
+                                </div>
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <img src={journal1} className="d-block w-100" alt="book front"/>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src={journal2} className="d-block w-100" alt="book back"/>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src={journal3} className="d-block w-100" alt="book inside"/>
+                                    </div>
+                                </div>
+                                <button className="carousel-control-prev" type="button"
+                                        data-bs-target="#journal__carousel" data-bs-slide="prev">
+                                    <span className="carousel-control-prev-icon" aria-hidden="true"/>
+                                    <span className="visually-hidden">Previous</span>
+                                </button>
+                                <button className="carousel-control-next" type="button"
+                                        data-bs-target="#journal__carousel" data-bs-slide="next">
+                                    <span className="carousel-control-next-icon" aria-hidden="true"/>
+                                    <span className="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <img src={journal1} className="d-block w-100" alt="book front"/>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src={journal2} className="d-block w-100" alt="book back"/>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src={journal3} className="d-block w-100" alt="book inside"/>
-                                </div>
-                            </div>
-                            <button className="carousel-control-prev" type="button"
-                                    data-bs-target="#journal__carousel" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"/>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button"
-                                    data-bs-target="#journal__carousel" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"/>
-                                <span className="visually-hidden">Next</span>
-                            </button>
                         </div>
-                        <div id="journal__form">
+                        <div id="journal__form"
+                             className="col-12 col-lg-7">
                             <h3 id="journal__form__title"
-                                className="h2">
+                                className="h3 text-center">
                                 Wanderer's Journal
                             </h3>
-                            <div id="journal__form__description">
-                                <p>
-                                    Art book features:
-                                </p>
+                            <div id="journal__form__description"
+                                 className="my-4">
                                 <img src={hrTop} alt="hr"
                                      className="w-100"/>
-                                <div className="py-5">
-                                    <div className="d-md-flex flex-md-nowrap align-items-md-center">
+                                <div className="py-4 row gy-5 gx-5 text-center">
+                                    <div className="col-12 col-md-4">
                                         <img src={guide} alt="guide"
-                                             className="d-block mx-auto mx-md-0"
-                                             style={{height: 160, width: 160}}/>
-                                        <p className="mb-0 text-center text-md-start ms-md-5 fs-5 mt-3 mt-md-0">
+                                             className="d-block mx-auto"
+                                             style={{height: 120, width: 120}}/>
+                                        <p className="mb-0 mt-3 mx-auto"
+                                           style={{maxWidth: 260}}>
                                             A comprehensive guide to all of Hallownest's varied environments
                                         </p>
                                     </div>
-                                    <div className="d-md-flex flex-md-nowrap align-items-md-center mt-5">
+                                    <div className="col-12 col-md-4">
                                         <img src={monster} alt="monster"
-                                             className="d-block mx-auto mx-md-0"
-                                             style={{height: 160, width: 160}}/>
-                                        <p className="mb-0 text-center text-md-start ms-md-5 fs-5 mt-3 mt-md-0">
+                                             className="d-block mx-auto"
+                                             style={{height: 120, width: 120}}/>
+                                        <p className="mb-0 mt-3 mx-auto"
+                                           style={{maxWidth: 260}}>
                                             Friendly faces, fearsome foes, flora, fauna and fungi
                                         </p>
                                     </div>
-                                    <div className="d-md-flex flex-md-nowrap align-items-md-center mt-5">
+                                    <div className="col-12 col-md-4">
                                         <img src={feather} alt="feather"
-                                             className="d-block mx-auto mx-md-0"
-                                             style={{height: 160, width: 160}}/>
-                                        <p className="mb-0 text-center text-md-start ms-md-5 fs-5 mt-3 mt-md-0">
+                                             className="d-block mx-auto"
+                                             style={{height: 120, width: 120}}/>
+                                        <p className="mb-0 mt-3 mx-auto"
+                                           style={{maxWidth: 260}}>
                                             A void-black faux leather cover with silver and blue foil that shines like a
                                             Lumafly Lantern
                                         </p>

@@ -102,10 +102,14 @@ $utilities: (
 @import "~bootstrap/scss/offcanvas";
 
 #piano__form__description__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 18em;
+  font-size: 0.75rem;
+
   @include media-breakpoint-up(md) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 300px;
+    font-size: 1rem;
+    max-height: 13em;
   }
 }
