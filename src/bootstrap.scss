@@ -31,6 +31,8 @@ $gray-700: shade-color($gray, 40%);
 $gray-800: shade-color($gray, 60%);
 $gray-900: shade-color($gray, 80%);
 
+$gray-850: shade-color($gray, 75%);
+
 $body-bg: $gray-900;
 $body-color: $gray-100;
 
@@ -116,7 +118,12 @@ $utilities: (
   font-size: 0.75rem;
 
   @include media-breakpoint-up(md) {
-    font-size: 1rem;
+    font-size: 1.125rem;
+    line-height: 2;
     max-height: 13em;
   }
+}
+
+#section-coming {
+  background-color: $gray-850;
 }

@@ -115,7 +115,7 @@ function App() {
                 </div>
             </div>
             <header id="header"
-                    className="border-bottom py-5">
+                    className="border-bottom py-7">
                 <div id="header__container" className="container">
                     <img src={logo} alt="logo"
                          id="header__container__logo"
@@ -126,13 +126,14 @@ function App() {
                     </h1>
                 </div>
             </header>
-            <section id="section-book">
+            <section id="section-book"
+                     className="py-7 border-bottom">
                 <div className="container">
                     <h2>
                         Books
                     </h2>
                     <div id="piano"
-                         className="row gy-5 gx-7 py-5">
+                         className="row gy-5 gx-lg-7 mt-7">
                         <div className="col-12 col-lg-5">
                             <div id="piano__carousel"
                                  className="carousel slide"
@@ -177,7 +178,7 @@ function App() {
                                 <img src={hrTop} alt="hr"
                                      className="w-100"/>
                                 <ol id="piano__form__description__list"
-                                    className="m-0 py-4 ps-5 ps-md-6">
+                                    className="m-0 py-4 ps-5 ps-md-7">
                                     <li>Dirtmouth</li>
                                     <li>Crossroads</li>
                                     <li>Greenpath</li>
@@ -212,7 +213,7 @@ function App() {
                         </div>
                     </div>
                     <div id="journal"
-                         className="row gy-5 gx-7 py-5">
+                         className="row gy-5 gx-lg-7 mt-7">
                         <div className="col-12 col-lg-5">
                             <div id="journal__carousel" className="carousel slide"
                                  data-bs-interval="false" data-bs-wrap="true">
@@ -260,11 +261,11 @@ function App() {
                                  className="my-4">
                                 <img src={hrTop} alt="hr"
                                      className="w-100"/>
-                                <div className="py-4 row gy-5 gx-5 text-center">
+                                <div className="py-4 row gy-5 gx-md-5 text-center">
                                     <div className="col-12 col-md-4">
                                         <img src={guide} alt="guide"
                                              className="d-block mx-auto"
-                                             style={{height: 120, width: 120}}/>
+                                             style={{height: 100, width: 100}}/>
                                         <p className="mb-0 mt-3 mx-auto"
                                            style={{maxWidth: 260}}>
                                             A comprehensive guide to all of Hallownest's varied environments
@@ -273,7 +274,7 @@ function App() {
                                     <div className="col-12 col-md-4">
                                         <img src={monster} alt="monster"
                                              className="d-block mx-auto"
-                                             style={{height: 120, width: 120}}/>
+                                             style={{height: 100, width: 100}}/>
                                         <p className="mb-0 mt-3 mx-auto"
                                            style={{maxWidth: 260}}>
                                             Friendly faces, fearsome foes, flora, fauna and fungi
@@ -282,11 +283,10 @@ function App() {
                                     <div className="col-12 col-md-4">
                                         <img src={feather} alt="feather"
                                              className="d-block mx-auto"
-                                             style={{height: 120, width: 120}}/>
+                                             style={{height: 100, width: 100}}/>
                                         <p className="mb-0 mt-3 mx-auto"
                                            style={{maxWidth: 260}}>
-                                            A void-black faux leather cover with silver and blue foil that shines like a
-                                            Lumafly Lantern
+                                            A void-black faux leather cover with silver and blue foil
                                         </p>
                                     </div>
                                 </div>
@@ -309,7 +309,8 @@ function App() {
                     </div>
                 </div>
             </section>
-            <section id="section-coming">
+            <section id="section-coming"
+                     className="py-7 border-bottom">
                 <div className="container">
                     <h2 className="h2">
                         Coming Soon
@@ -339,7 +340,8 @@ function App() {
                     </div>
                 </div>
             </section>
-            <footer id="footer">
+            <footer id="footer"
+                    className="py-7">
                 <div className="container">
                     <img src={myla} alt="join our newsletter"
                          className="img-fluid"/>
