@@ -318,23 +318,35 @@ function App() {
                     <p>
                         (placeholder)
                     </p>
-                    <div className="row">
-                        <div className="card">
-                            <img src={vinylGN2} alt="vinyl - gods and nightmares soundtrack"
-                                 className="card-img"/>
-                            <div className="card-img-overlay">
-                                <p className="card-text">
-                                    Gods & Nightmares
-                                </p>
+                    <div className="row row-cols-1 row-cols-md-2 gy-5 gx-md-5 text-center">
+                        <div className="col">
+                            <div className="card bg-transparent">
+                                <img src={vinylGN2}
+                                     alt="vinyl - gods and nightmares soundtrack"
+                                     className="card-img"/>
+                                <div className="card-img-overlay d-flex flex-column justify-content-end">
+                                    <h3 className="card-text h6">
+                                        Gods & Nightmares
+                                    </h3>
+                                    <p className="fst-italic mb-0 mb-lg-5">
+                                        vinyl
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div className="card">
-                            <img src={vinylOriginal2} alt="vinyl - original soundtrack"
-                                 className="card-img"/>
-                            <div className="card-img-overlay">
-                                <p className="card-text">
-                                    Original
-                                </p>
+                        <div className="col">
+                            <div className="card bg-transparent">
+                                <img src={vinylOriginal2}
+                                     alt="vinyl - original soundtrack"
+                                     className="card-img"/>
+                                <div className="card-img-overlay d-flex flex-column justify-content-end">
+                                    <h3 className="card-text h6">
+                                        Original
+                                    </h3>
+                                    <p className="fst-italic mb-0 mb-lg-5">
+                                        vinyl
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
