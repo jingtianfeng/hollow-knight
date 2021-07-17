@@ -355,21 +355,28 @@ function App() {
             <footer id="footer"
                     className="py-7">
                 <div className="container">
-                    <img src={myla} alt="join our newsletter"
-                         className="img-fluid"/>
-                    <form action="/"
-                          id="newsletter">
-                        <label htmlFor="newsletter__input"
-                               className="h2">
-                            Join our newsletter!
-                        </label>
-                        <input type="email" placeholder="myla@hallownest.com"
-                               id="newsletter__input"/>
-                        <button>
-                            sign up
-                        </button>
-                    </form>
-                    <p id="signature">
+                    <div className="row row-cols-1 row-cols-md-2 gy-5 gx-md-5 align-items-md-center">
+                        <div className="col">
+                            <img src={myla} alt="join our newsletter"
+                                 className="img-fluid"/>
+                        </div>
+                        <div className="col">
+                            <form action="/"
+                                  id="newsletter">
+                                <label htmlFor="newsletter__input"
+                                       className="h2 d-block mb-4">
+                                    Join our newsletter!
+                                </label>
+                                <input type="email" placeholder="myla@hallownest.com"
+                                       id="newsletter__input"/>
+                                <button>
+                                    sign up
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <p id="signature"
+                       className="mb-0 text-center mt-5">
                         Made with ♥ by JT Feng
                     </p>
                 </div>
