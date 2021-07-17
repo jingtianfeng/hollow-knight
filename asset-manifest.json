@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hollow-knight/static/css/main.f59ab255.chunk.css",
-    "main.js": "/hollow-knight/static/js/main.2949f64a.chunk.js",
-    "main.js.map": "/hollow-knight/static/js/main.2949f64a.chunk.js.map",
+    "main.js": "/hollow-knight/static/js/main.ea15ace0.chunk.js",
+    "main.js.map": "/hollow-knight/static/js/main.ea15ace0.chunk.js.map",
     "runtime-main.js": "/hollow-knight/static/js/runtime-main.d609d924.js",
     "runtime-main.js.map": "/hollow-knight/static/js/runtime-main.d609d924.js.map",
     "static/js/2.7e02dc8f.chunk.js": "/hollow-knight/static/js/2.7e02dc8f.chunk.js",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.d609d924.js",
     "static/js/2.7e02dc8f.chunk.js",
     "static/css/main.f59ab255.chunk.css",
-    "static/js/main.2949f64a.chunk.js"
+    "static/js/main.ea15ace0.chunk.js"
   ]
 }
