@@ -202,12 +202,14 @@ function App() {
                                 QTY (max. 5)
                             </label>
                             <input type="number" min="1" max="5"
-                                   id="piano__form__number"/>
+                                   id="piano__form__number"
+                                   className=""/>
                             <div id="piano__form__price">
-                                $25 x 1 = $25
+                                $25
                             </div>
                             <button type="button"
-                                    id="piano__form__button">
+                                    id="piano__form__button"
+                                    className="btn btn-primary btn-lg">
                                 add to cart
                             </button>
                         </div>
@@ -299,10 +301,11 @@ function App() {
                             <input type="number" min="1" max="5"
                                    id="journal__form__number"/>
                             <div id="journal__form__price">
-                                $29 x 1 = $29
+                                $29
                             </div>
                             <button type="button"
-                                    id="journal__form__button">
+                                    id="journal__form__button"
+                                    className="btn btn-primary btn-lg">
                                 add to cart
                             </button>
                         </div>
@@ -355,28 +358,32 @@ function App() {
             <footer id="footer"
                     className="py-7">
                 <div className="container">
-                    <div className="row row-cols-1 row-cols-md-2 gy-5 gx-md-5 align-items-md-center">
-                        <div className="col">
+                    <div className="row gy-5 gx-md-5 align-items-md-center">
+                        <div className="col-12 col-md-6 col-lg-5">
                             <img src={myla} alt="join our newsletter"
                                  className="img-fluid"/>
                         </div>
-                        <div className="col">
+                        <div className="col-12 col-md-6 col-lg-7">
                             <form action="/"
                                   id="newsletter">
                                 <label htmlFor="newsletter__input"
-                                       className="h2 d-block mb-4">
+                                       className="display-4 d-block mb-4 mb-lg-5">
                                     Join our newsletter!
                                 </label>
-                                <input type="email" placeholder="myla@hallownest.com"
-                                       id="newsletter__input"/>
-                                <button>
-                                    sign up
-                                </button>
+                                <div className="input-group input-group-lg">
+                                    <input type="email" placeholder="myla@hallownest.com"
+                                           id="newsletter__input"
+                                           className="form-control"
+                                           style={{maxWidth: 300}}/>
+                                    <button className="btn btn-primary">
+                                        sign up
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
                     <p id="signature"
-                       className="mb-0 text-center mt-5">
+                       className="mb-0 text-center mt-7">
                         Made with ♥ by JT Feng
                     </p>
                 </div>
