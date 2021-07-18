@@ -2,6 +2,8 @@
 
 @import "~bootstrap/scss/functions";
 
+$enable-shadows: true;
+
 $spacer: 1rem;
 $spacers: (
         0: 0,
@@ -40,6 +42,10 @@ $primary: $gray-500;
 $body-bg: $gray-900;
 $body-color: $gray-100;
 
+$input-bg: $gray-850;
+$btn-font-weight: 500;
+$btn-close-color: $white;
+
 $navbar-nav-link-padding-x: 20px;
 $navbar-dark-color: rgba($body-color, .75);
 $navbar-dark-hover-color: rgba($body-color, 1);
@@ -57,7 +63,9 @@ $carousel-indicator-active-opacity: 0.6;
 $carousel-indicator-spacer: 4px;
 $carousel-transition-duration: 0.5s;
 
-$input-bg: $gray-850;
+$modal-content-bg: $gray-850;
+$modal-title-line-height: 1;
+$offcanvas-horizontal-width: 300px;
 
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
