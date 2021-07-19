@@ -115,7 +115,7 @@ function App() {
                 </div>
             </div>
             <header id="header"
-                    className="border-bottom py-7">
+                    className="border-bottom py-5">
                 <div id="header__container" className="container">
                     <img src={logo} alt="logo"
                          id="header__container__logo"
@@ -127,13 +127,13 @@ function App() {
                 </div>
             </header>
             <section id="section-book"
-                     className="py-7 border-bottom">
+                     className="pt-6 pb-7 border-bottom">
                 <div className="container">
                     <h2>
                         Books
                     </h2>
                     <div id="piano"
-                         className="row gy-5 gx-lg-7 mt-7">
+                         className="row gy-5 gx-lg-7 mt-5">
                         <div className="col-12 col-lg-5">
                             <div id="piano__carousel"
                                  className="carousel slide"
@@ -215,7 +215,7 @@ function App() {
                         </div>
                     </div>
                     <div id="journal"
-                         className="row gy-5 gx-lg-7 mt-7">
+                         className="row gy-5 gx-lg-7 mt-5">
                         <div className="col-12 col-lg-5">
                             <div id="journal__carousel" className="carousel slide"
                                  data-bs-interval="false" data-bs-wrap="true">
@@ -313,7 +313,7 @@ function App() {
                 </div>
             </section>
             <section id="section-coming"
-                     className="py-7 border-bottom">
+                     className="py-6 border-bottom">
                 <div className="container">
                     <h2 className="h2">
                         Coming Soon
@@ -356,7 +356,7 @@ function App() {
                 </div>
             </section>
             <footer id="footer"
-                    className="py-7">
+                    className="py-6">
                 <div className="container">
                     <div className="row gy-5 gx-md-5 align-items-md-center">
                         <div className="col-12 col-md-6 col-lg-5">
@@ -383,7 +383,7 @@ function App() {
                         </div>
                     </div>
                     <p id="signature"
-                       className="mb-0 text-center mt-7">
+                       className="mb-0 text-center mt-6">
                         Made with ♥ by JT Feng
                     </p>
                 </div>
