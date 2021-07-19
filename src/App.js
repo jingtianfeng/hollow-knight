@@ -1,5 +1,4 @@
 import "./App.sass"
-import logo from './img/logo.png'
 import hrTop from './img/hr2.png'
 import hrBottom from './img/hr-bottom.png'
 import piano1 from './img/book/piano-collection-1.png'
@@ -16,6 +15,7 @@ import myla from './img/myla.png'
 import NavTop from "./NavTop";
 import Cart from "./Cart";
 import Checkout from "./Checkout";
+import Header from "./Header";
 
 function App() {
     return (
@@ -23,18 +23,7 @@ function App() {
             <NavTop/>
             <Cart/>
             <Checkout/>
-            <header id="header"
-                    className="border-bottom py-5">
-                <div id="header__container" className="container">
-                    <img src={logo} alt="logo"
-                         id="header__container__logo"
-                         className="d-block img-fluid mx-auto mb-3"/>
-                    <h1 id="header__container__title"
-                        className="h1 text-white text-center">
-                        Merch Store
-                    </h1>
-                </div>
-            </header>
+            <Header/>
             <section id="section-book"
                      className="pt-6 pb-7 border-bottom">
                 <div className="container">
