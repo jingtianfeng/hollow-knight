@@ -1,4 +1,3 @@
-import "./App.sass"
 import NavTop from "./NavTop";
 import Cart from "./Cart";
 import Checkout from "./Checkout";

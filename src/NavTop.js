@@ -3,10 +3,12 @@ import icon from "./img/icon/white-32.png";
 function NavTop() {
     return (
         <nav id="navbar"
-             className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+             className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"
+             style={{fontFamily: 'Cinzel', fontWeight: 500}}>
             <div id="navbar__container" className="container">
                 <button id="navbar__container__toggler"
                         className="navbar-toggler fs-6 border-0"
+                        style={{fontWeight: 500}}
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbar__container__menu"
@@ -20,6 +22,7 @@ function NavTop() {
                      className="navbar-brand me-0"/>
                 <div id="navbar__container__cart"
                      className="navbar-text btn position-relative order-lg-last"
+                     style={{fontWeight: 500}}
                      data-bs-toggle="offcanvas" data-bs-target="#cart"
                      aria-controls="cart">
                     CART
@@ -32,7 +35,8 @@ function NavTop() {
                 <div id="navbar__container__menu"
                      className="collapse navbar-collapse justify-content-lg-center">
                     <ul id="navbar__container__menu__nav"
-                        className="navbar-nav navbar-nav-scroll m-lg-0">
+                        className="navbar-nav navbar-nav-scroll m-lg-0"
+                        style={{margin: 12}}>
                         <li className="nav-item">
                             <a href="#top" className="nav-link">Home</a>
                         </li>
