@@ -181,9 +181,9 @@ function SectionBook() {
                                 <label htmlFor={`${id}__form__number`}>
                                     QTY (max. {quantityMax})
                                 </label>
-                                <input type="number" min="1" max="5"
-                                       id={`${id}__form__number`}
-                                       className=""/>
+                                <input type="number"
+                                       min="1" max={quantityMax}
+                                       id={`${id}__form__number`}/>
                                 <div id={`${id}__form__price`}>
                                     {`$${price}`}
                                 </div>
