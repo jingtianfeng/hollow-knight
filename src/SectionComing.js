@@ -13,36 +13,36 @@ function SectionComing() {
                     (placeholder)
                 </p>
                 <div className="row row-cols-1 row-cols-md-2 gy-5 gx-md-5 text-center">
-                    <div className="col">
-                        <div className="card bg-transparent">
-                            <img src={vinylGN2}
-                                 alt="vinyl - gods and nightmares soundtrack"
-                                 className="card-img"/>
-                            <div className="card-img-overlay d-flex flex-column justify-content-end">
-                                <h3 className="card-text h6">
-                                    Gods & Nightmares
-                                </h3>
-                                <p className="fst-italic mb-0 mb-lg-5">
-                                    vinyl
-                                </p>
+                    {[
+                        {
+                            imgSrc: `${vinylGN2}`,
+                            title: 'Gods & Nightmares',
+                            text: 'vinyl',
+                        },
+                        {
+                            imgSrc: `${vinylOriginal2}`,
+                            title: 'Original',
+                            text: 'vinyl',
+                        }
+                    ].map(({imgSrc, title, text}, idx) => {
+                        return (
+                            <div className="col" key={idx}>
+                                <div className="card bg-transparent">
+                                    <img src={imgSrc}
+                                         alt="vinyl - original soundtrack"
+                                         className="card-img"/>
+                                    <div className="card-img-overlay d-flex flex-column justify-content-end">
+                                        <h3 className="card-text h6">
+                                            {title}
+                                        </h3>
+                                        <p className="fst-italic mb-0 mb-lg-5">
+                                            {text}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="card bg-transparent">
-                            <img src={vinylOriginal2}
-                                 alt="vinyl - original soundtrack"
-                                 className="card-img"/>
-                            <div className="card-img-overlay d-flex flex-column justify-content-end">
-                                <h3 className="card-text h6">
-                                    Original
-                                </h3>
-                                <p className="fst-italic mb-0 mb-lg-5">
-                                    vinyl
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
             </div>
         </section>
