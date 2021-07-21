@@ -1,10 +1,10 @@
 import piano1 from "./img/book/piano-collection-1.png";
 import piano2 from "./img/book/piano-collection-2.png";
-import hrTop from "./img/hr2.png";
-import hrBottom from "./img/hr-bottom.png";
 import journal1 from "./img/book/wanderer-journal-1.png";
 import journal2 from "./img/book/wanderer-journal-2.png";
 import journal3 from "./img/book/wanderer-journal-3.png";
+import hrTop from "./img/hr2.png";
+import hrBottom from "./img/hr-bottom.png";
 import guide from "./img/illustration-guide2.webp";
 import monster from "./img/illustration-monster2.webp";
 import feather from "./img/illustration-feather.webp";
@@ -17,53 +17,22 @@ function SectionBook() {
                 <h2>
                     Books
                 </h2>
-                <div id="piano"
-                     className="row gy-5 gx-lg-7 mt-5">
-                    <div className="col-12 col-lg-5">
-                        <div id="piano__carousel"
-                             className="carousel slide"
-                             data-bs-interval="false" data-bs-wrap="true">
-                            <div className="carousel-indicators">
-                                <button type="button"
-                                        className="active rounded-circle"
-                                        data-bs-target="#piano__carousel" data-bs-slide-to="0"
-                                        aria-current="true" aria-label="Slide 1"/>
-                                <button type="button" className="rounded-circle"
-                                        data-bs-target="#piano__carousel" data-bs-slide-to="1"
-                                        aria-label="Slide 2"/>
-                            </div>
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <img src={piano1} className="d-block w-100" alt="book front"/>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src={piano2} className="d-block w-100" alt="book back"/>
-                                </div>
-                            </div>
-                            <button className="carousel-control-prev" type="button"
-                                    data-bs-target="#piano__carousel" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"/>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button"
-                                    data-bs-target="#piano__carousel" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"/>
-                                <span className="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div id="piano__form"
-                         className="col-12 col-lg-7">
-                        <h3 id="piano__form__title"
-                            className="h3 text-center">
-                            Piano Collections
-                        </h3>
-                        <div id="piano__form__description"
-                             className="my-4">
-                            <img src={hrTop} alt="hr"
-                                 className="w-100"/>
-                            <ol id="piano__form__description__list"
-                                className="m-0 py-4 ps-5 ps-md-7">
+                {[
+                    {
+                        id: 'piano',
+                        arrImgSrc: [
+                            {
+                                src: `${piano1}`,
+                                alt: 'piano front',
+                            },
+                            {
+                                src: `${piano2}`,
+                                alt: 'piano back',
+                            }
+                        ],
+                        heading: 'Piano Collections',
+                        description: (
+                            <ol className="m-0 py-4 ps-5 ps-md-7">
                                 <li>Dirtmouth</li>
                                 <li>Crossroads</li>
                                 <li>Greenpath</li>
@@ -80,74 +49,28 @@ function SectionBook() {
                                 <li>Hollow Knight</li>
                                 <li>Grimm Troupe</li>
                             </ol>
-                            <img src={hrBottom} alt="hr"
-                                 className="w-100"/>
-                        </div>
-                        <label htmlFor="piano__form__number">
-                            QTY (max. 5)
-                        </label>
-                        <input type="number" min="1" max="5"
-                               id="piano__form__number"
-                               className=""/>
-                        <div id="piano__form__price">
-                            $25
-                        </div>
-                        <button type="button"
-                                id="piano__form__button"
-                                className="btn btn-primary btn-lg">
-                            add to cart
-                        </button>
-                    </div>
-                </div>
-                <div id="journal"
-                     className="row gy-5 gx-lg-7 mt-5">
-                    <div className="col-12 col-lg-5">
-                        <div id="journal__carousel" className="carousel slide"
-                             data-bs-interval="false" data-bs-wrap="true">
-                            <div className="carousel-indicators">
-                                <button type="button" className="active rounded-circle"
-                                        data-bs-target="#journal__carousel" data-bs-slide-to="0"
-                                        aria-current="true" aria-label="Slide 1"/>
-                                <button type="button" className="rounded-circle"
-                                        data-bs-target="#journal__carousel" data-bs-slide-to="1"
-                                        aria-label="Slide 2"/>
-                                <button type="button" className="rounded-circle"
-                                        data-bs-target="#journal__carousel" data-bs-slide-to="2"
-                                        aria-label="Slide 3"/>
-                            </div>
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <img src={journal1} className="d-block w-100" alt="book front"/>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src={journal2} className="d-block w-100" alt="book back"/>
-                                </div>
-                                <div className="carousel-item">
-                                    <img src={journal3} className="d-block w-100" alt="book inside"/>
-                                </div>
-                            </div>
-                            <button className="carousel-control-prev" type="button"
-                                    data-bs-target="#journal__carousel" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"/>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button"
-                                    data-bs-target="#journal__carousel" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"/>
-                                <span className="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div id="journal__form"
-                         className="col-12 col-lg-7">
-                        <h3 id="journal__form__title"
-                            className="h3 text-center">
-                            Wanderer's Journal
-                        </h3>
-                        <div id="journal__form__description"
-                             className="my-4">
-                            <img src={hrTop} alt="hr"
-                                 className="w-100"/>
+                        ),
+                        quantityMax: 5,
+                        price: 25,
+                    },
+                    {
+                        id: 'journal',
+                        arrImgSrc: [
+                            {
+                                src: `${journal1}`,
+                                alt: 'journal front',
+                            },
+                            {
+                                src: `${journal2}`,
+                                alt: 'journal back',
+                            },
+                            {
+                                src: `${journal3}`,
+                                alt: 'journal page',
+                            }
+                        ],
+                        heading: "Wanderer's Journal",
+                        description: (
                             <div className="py-4 row gy-5 gx-md-5 text-center">
                                 <div className="col-12 col-md-4">
                                     <img src={guide} alt="guide"
@@ -177,24 +100,90 @@ function SectionBook() {
                                     </p>
                                 </div>
                             </div>
-                            <img src={hrBottom} alt="hr"
-                                 className="w-100"/>
+                        ),
+                        quantityMax: 3,
+                        price: 29,
+                    },
+                ].map(({id, arrImgSrc, heading, description, quantityMax, price}, idx) => {
+                    return (
+                        <div id={id} key={idx}
+                             className="row gy-5 gx-lg-7 mt-5">
+                            <div className="col-12 col-lg-5">
+                                <div id={`${id}__carousel`}
+                                     className="carousel slide"
+                                     data-bs-interval="false" data-bs-wrap="true">
+                                    <div className="carousel-indicators">
+                                        {arrImgSrc.map((_, imgIdx) => {
+                                            return (
+                                                <button type="button" key={imgIdx}
+                                                        className={`rounded-circle ${imgIdx === 0 ? 'active' : ''}`}
+                                                        data-bs-target={`#${id}__carousel`}
+                                                        data-bs-slide-to={imgIdx}
+                                                        aria-label={`slide ${imgIdx + 1}`}
+                                                        aria-current={imgIdx === 0}/>
+                                            )
+                                        })}
+                                    </div>
+                                    <div className="carousel-inner">
+                                        {arrImgSrc.map((imgObj, imgIdx) => {
+                                            return (
+                                                <div key={imgIdx}
+                                                     className={`carousel-item ${imgIdx === 0 ? 'active' : ''}`}>
+                                                    <img src={imgObj.src} alt={imgObj.alt}
+                                                         className="d-block w-100"/>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                    <button type="button"
+                                            className="carousel-control-prev"
+                                            data-bs-target={`#${id}__carousel`}
+                                            data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon"
+                                              aria-hidden="true"/>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button"
+                                            data-bs-target={`#${id}__carousel`}
+                                            data-bs-slide="next">
+                                        <span className="carousel-control-next-icon"
+                                              aria-hidden="true"/>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id={`${id}__form`}
+                                 className="col-12 col-lg-7">
+                                <h3 id={`${id}__form__title`}
+                                    className="h3 text-center">
+                                    {heading}
+                                </h3>
+                                <div id={`${id}__form__description`}
+                                     className="my-4">
+                                    <img src={hrTop} alt="hr"
+                                         className="w-100"/>
+                                    {description}
+                                    <img src={hrBottom} alt="hr"
+                                         className="w-100"/>
+                                </div>
+                                <label htmlFor={`${id}__form__number`}>
+                                    QTY (max. {quantityMax})
+                                </label>
+                                <input type="number" min="1" max="5"
+                                       id={`${id}__form__number`}
+                                       className=""/>
+                                <div id={`${id}__form__price`}>
+                                    {`$${price}`}
+                                </div>
+                                <button type="button"
+                                        id={`${id}__form__button`}
+                                        className="btn btn-primary btn-lg">
+                                    add to cart
+                                </button>
+                            </div>
                         </div>
-                        <label htmlFor="journal__form__number">
-                            QTY (max. 5)
-                        </label>
-                        <input type="number" min="1" max="5"
-                               id="journal__form__number"/>
-                        <div id="journal__form__price">
-                            $29
-                        </div>
-                        <button type="button"
-                                id="journal__form__button"
-                                className="btn btn-primary btn-lg">
-                            add to cart
-                        </button>
-                    </div>
-                </div>
+                    )
+                })}
             </div>
         </section>
     )
