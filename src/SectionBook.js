@@ -123,11 +123,13 @@ function SectionBook() {
                             <div className="col-12 col-lg-5">
                                 <div id={`${id}__carousel`}
                                      className="carousel slide"
-                                     data-bs-interval="false" data-bs-wrap="true">
+                                     data-bs-interval="false"
+                                     data-bs-wrap="true">
                                     <div className="carousel-indicators">
                                         {arrImgSrc.map((_, imgIdx) => {
                                             return (
-                                                <button type="button" key={imgIdx}
+                                                <button type="button"
+                                                        key={imgIdx}
                                                         className={`rounded-circle ${imgIdx === 0 ? 'active' : ''}`}
                                                         data-bs-target={`#${id}__carousel`}
                                                         data-bs-slide-to={imgIdx}
@@ -142,6 +144,7 @@ function SectionBook() {
                                                 <div key={imgIdx}
                                                      className={`carousel-item ${imgIdx === 0 ? 'active' : ''}`}>
                                                     <img src={imgObj.src} alt={imgObj.alt}
+                                                         height="auto" width="600"
                                                          className="d-block w-100"/>
                                                 </div>
                                             )
@@ -155,7 +158,8 @@ function SectionBook() {
                                               aria-hidden="true"/>
                                         <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button className="carousel-control-next" type="button"
+                                    <button type="button"
+                                            className="carousel-control-next"
                                             data-bs-target={`#${id}__carousel`}
                                             data-bs-slide="next">
                                         <span className="carousel-control-next-icon"
@@ -173,9 +177,11 @@ function SectionBook() {
                                 <div id={`${id}__form__description`}
                                      className="my-4">
                                     <img src={hrTop} alt="hr"
+                                         height="auto" width="600"
                                          className="w-100"/>
                                     {description}
                                     <img src={hrBottom} alt="hr"
+                                         height="auto" width="600"
                                          className="w-100"/>
                                 </div>
                                 <label htmlFor={`${id}__form__number`}>
