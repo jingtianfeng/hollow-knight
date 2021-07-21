@@ -32,7 +32,8 @@ function SectionBook() {
                         ],
                         heading: 'Piano Collections',
                         description: (
-                            <ol className="m-0 py-4 ps-5 ps-md-7">
+                            <ol id="piano__form__description__list"
+                                className="m-0 py-4 ps-5 ps-md-7">
                                 <li>Dirtmouth</li>
                                 <li>Crossroads</li>
                                 <li>Greenpath</li>
