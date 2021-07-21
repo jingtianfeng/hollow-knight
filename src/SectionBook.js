@@ -34,21 +34,30 @@ function SectionBook() {
                         description: (
                             <ol id="piano__form__description__list"
                                 className="m-0 py-4 ps-5 ps-md-7">
-                                <li>Dirtmouth</li>
-                                <li>Crossroads</li>
-                                <li>Greenpath</li>
-                                <li>Hornet</li>
-                                <li>Reflection</li>
-                                <li>Mantis Lords</li>
-                                <li>City of Tears</li>
-                                <li>Resting Grounds</li>
-                                <li>Dung Defender</li>
-                                <li>Queen's Gardens</li>
-                                <li>White Palace</li>
-                                <li>Sealed Vessel</li>
-                                <li>Radiance</li>
-                                <li>Hollow Knight</li>
-                                <li>Grimm Troupe</li>
+                                {[
+                                    'Dirtmouth',
+                                    'Crossroads',
+                                    'Greenpath',
+                                    'Hornet',
+                                    'Reflection',
+                                    'Mantis Lords',
+                                    'City of Tears',
+                                    'Resting Grounds',
+                                    'Dung Defender',
+                                    "Queen's Gardens",
+                                    'White Palace',
+                                    'Sealed Vessel',
+                                    'Radiance',
+                                    'Hollow Knight',
+                                    'Grimm Troupe',
+                                ].map((song, songIdx) => {
+                                        return (
+                                            <li key={songIdx}>
+                                                {song}
+                                            </li>
+                                        )
+                                    }
+                                )}
                             </ol>
                         ),
                         quantityMax: 5,
@@ -73,33 +82,35 @@ function SectionBook() {
                         heading: "Wanderer's Journal",
                         description: (
                             <div className="py-4 row gy-5 gx-md-5 text-center">
-                                <div className="col-12 col-md-4">
-                                    <img src={guide} alt="guide"
-                                         className="d-block mx-auto"
-                                         style={{height: 100, width: 100}}/>
-                                    <p className="mb-0 mt-3 mx-auto"
-                                       style={{maxWidth: 260}}>
-                                        A comprehensive guide to all of Hallownest's varied environments
-                                    </p>
-                                </div>
-                                <div className="col-12 col-md-4">
-                                    <img src={monster} alt="monster"
-                                         className="d-block mx-auto"
-                                         style={{height: 100, width: 100}}/>
-                                    <p className="mb-0 mt-3 mx-auto"
-                                       style={{maxWidth: 260}}>
-                                        Friendly faces, fearsome foes, flora, fauna and fungi
-                                    </p>
-                                </div>
-                                <div className="col-12 col-md-4">
-                                    <img src={feather} alt="feather"
-                                         className="d-block mx-auto"
-                                         style={{height: 100, width: 100}}/>
-                                    <p className="mb-0 mt-3 mx-auto"
-                                       style={{maxWidth: 260}}>
-                                        A void-black faux leather cover with silver and blue foil
-                                    </p>
-                                </div>
+                                {[
+                                    {
+                                        imgSrc: `${guide}`,
+                                        text: 'A comprehensive guide to all of Hallownest\'s varied environments',
+                                    },
+                                    {
+                                        imgSrc: `${monster}`,
+                                        text: 'Friendly faces, fearsome foes, flora, fauna and fungi',
+                                    },
+                                    {
+                                        imgSrc: `${feather}`,
+                                        text: 'A void-black faux leather cover with silver and blue foil',
+                                    },
+                                ].map(({imgSrc, text}, objIdx) => {
+                                        return (
+                                            <div key={objIdx}
+                                                 className="col-12 col-md-4">
+                                                <img src={imgSrc} alt="guide"
+                                                     height="100" width="100"
+                                                     className="d-block mx-auto"
+                                                     style={{height: 100, width: 100}}/>
+                                                <p className="mb-0 mt-3 mx-auto"
+                                                   style={{maxWidth: 250}}>
+                                                    {text}
+                                                </p>
+                                            </div>
+                                        )
+                                    }
+                                )}
                             </div>
                         ),
                         quantityMax: 3,
