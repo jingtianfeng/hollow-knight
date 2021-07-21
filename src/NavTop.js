@@ -37,18 +37,30 @@ function NavTop() {
                     <ul id="navbar__container__menu__nav"
                         className="navbar-nav navbar-nav-scroll m-lg-0"
                         style={{margin: 12}}>
-                        <li className="nav-item">
-                            <a href="#top" className="nav-link">Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#section-book" className="nav-link">Books</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#section-coming" className="nav-link">Coming Soon</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#footer" className="nav-link">Newsletter</a>
-                        </li>
+                        {[
+                            {
+                                href: '#top',
+                                text: 'Home',
+                            },
+                            {
+                                href: '#section-book',
+                                text: 'Books',
+                            },
+                            {
+                                href: '#section-coming',
+                                text: 'Coming Soon',
+                            },
+                            {
+                                href: '#footer',
+                                text: 'Newsletter',
+                            },
+                        ].map(({href, text}, idx) => {
+                            return (
+                                <li className="nav-item" key={idx}>
+                                    <a href={href} className="nav-link">{text}</a>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </div>
             </div>
