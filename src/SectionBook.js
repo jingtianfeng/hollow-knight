@@ -8,6 +8,7 @@ import hrBottom from "./img/hr-bottom.png";
 import guide from "./img/illustration-guide2.webp";
 import monster from "./img/illustration-monster2.webp";
 import feather from "./img/illustration-feather.webp";
+import OptionQuantity from "./OptionQuantity";
 
 function SectionBook() {
     return (
@@ -184,12 +185,7 @@ function SectionBook() {
                                          height="auto" width="600"
                                          className="w-100"/>
                                 </div>
-                                <label htmlFor={`${id}__form__number`}>
-                                    QTY (max. {quantityMax})
-                                </label>
-                                <input type="number"
-                                       min="1" max={quantityMax}
-                                       id={`${id}__form__number`}/>
+                                <OptionQuantity/>
                                 <div id={`${id}__form__price`}>
                                     {`$${price}`}
                                 </div>
