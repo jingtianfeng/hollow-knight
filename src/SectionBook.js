@@ -185,7 +185,7 @@ function SectionBook() {
                                          height="auto" width="600"
                                          className="w-100"/>
                                 </div>
-                                <OptionQuantity/>
+                                <OptionQuantity max={quantityMax}/>
                                 <div id={`${id}__form__price`}>
                                     {`$${price}`}
                                 </div>
