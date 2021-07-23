@@ -13,8 +13,8 @@ function OptionQuantity({max = 1}) {
             </button>
             <input type="text" min={1} max={max}
                    value={quantity}
-                   className="form-control border-0 bg-transparent fs-1 pe-none user-select-none"
-                   style={{maxWidth: '3rem'}}
+                   className="form-control border-0 p-0 bg-transparent text-center fs-1 pe-none user-select-none"
+                   style={{maxWidth: '1em'}}
                    readOnly={true} aria-readonly={true} aria-label="option - quantity"/>
             <button type="button"
                     className="input-group-text btn fw-bold"
