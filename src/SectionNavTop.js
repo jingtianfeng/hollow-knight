@@ -1,6 +1,6 @@
 import icon from "./img/icon/white-32.png";
 
-function NavTop() {
+function SectionNavTop() {
     return (
         <nav id="navbar"
              className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"
@@ -68,4 +68,4 @@ function NavTop() {
     )
 }
 
-export default NavTop
+export default SectionNavTop

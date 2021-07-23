@@ -1,4 +1,4 @@
-function Cart() {
+function SectionCart() {
     return (
         <div id="cart" className="offcanvas offcanvas-end"
              data-bs-backdrop="false" data-bs-scroll="true"
@@ -25,4 +25,4 @@ function Cart() {
     )
 }
 
-export default Cart
+export default SectionCart

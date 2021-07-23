@@ -1,4 +1,4 @@
-function Checkout() {
+function SectionCheckout() {
     return (
         <div id="checkout" className="modal fade"
              aria-hidden="true" aria-labelledby="checkout" tabIndex="-1">
@@ -30,4 +30,4 @@ function Checkout() {
     )
 }
 
-export default Checkout
+export default SectionCheckout

@@ -1,21 +1,21 @@
-import NavTop from "./NavTop";
-import Cart from "./Cart";
-import Checkout from "./Checkout";
-import Header from "./Header";
+import SectionNavTop from "./SectionNavTop";
+import SectionCart from "./SectionCart";
+import SectionCheckout from "./SectionCheckout";
+import SectionHeader from "./SectionHeader";
 import SectionBook from "./SectionBook";
 import SectionComing from "./SectionComing";
-import Footer from "./Footer";
+import SectionFooter from "./SectionFooter";
 
 function App() {
     return (
         <>
-            <NavTop/>
-            <Cart/>
-            <Checkout/>
-            <Header/>
+            <SectionNavTop/>
+            <SectionCart/>
+            <SectionCheckout/>
+            <SectionHeader/>
             <SectionBook/>
             <SectionComing/>
-            <Footer/>
+            <SectionFooter/>
         </>
     )
 }

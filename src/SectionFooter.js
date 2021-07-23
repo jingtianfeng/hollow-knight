@@ -1,6 +1,6 @@
 import myla from "./img/myla.png";
 
-function Footer() {
+function SectionFooter() {
     return (
         <footer id="footer"
                 className="py-6">
@@ -38,4 +38,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default SectionFooter

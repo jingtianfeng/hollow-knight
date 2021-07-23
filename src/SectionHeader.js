@@ -1,7 +1,7 @@
 import logo from "./img/logo.png";
 import banner from "./img/banner.png"
 
-function Header() {
+function SectionHeader() {
     return (
         <header id="header"
                 className="border-bottom py-5"
@@ -27,4 +27,4 @@ function Header() {
     )
 }
 
-export default Header
+export default SectionHeader
