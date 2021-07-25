@@ -1,8 +1,3 @@
-import piano1 from "./img/book/piano-collection-1.png";
-import piano2 from "./img/book/piano-collection-2.png";
-import journal1 from "./img/book/wanderer-journal-1.png";
-import journal2 from "./img/book/wanderer-journal-2.png";
-import journal3 from "./img/book/wanderer-journal-3.png";
 import hrTop from "./img/hr2.png";
 import hrBottom from "./img/hr-bottom.png";
 import guide from "./img/illustration-guide2.webp";
@@ -10,7 +5,12 @@ import monster from "./img/illustration-monster2.webp";
 import feather from "./img/illustration-feather.webp";
 import OptionQuantity from "./OptionQuantity";
 
-function SectionBook() {
+function SectionBook(
+    {
+        bookPianoID, bookPianoTitle, bookPianoImages, bookPianoPriceEach, bookPianoQtyMax,
+        bookJournalID, bookJournalTitle, bookJournalImages, bookJournalPriceEach, bookJournalQtyMax,
+    }
+) {
     return (
         <section id="section-book"
                  className="pt-6 pb-7 border-bottom">
@@ -20,20 +20,11 @@ function SectionBook() {
                 </h2>
                 {[
                     {
-                        id: 'piano',
-                        arrImgSrc: [
-                            {
-                                src: `${piano1}`,
-                                alt: 'piano front',
-                            },
-                            {
-                                src: `${piano2}`,
-                                alt: 'piano back',
-                            }
-                        ],
-                        heading: 'Piano Collections',
+                        id: bookPianoID,
+                        arrImgSrc: bookPianoImages,
+                        heading: bookPianoTitle,
                         description: (
-                            <ol id="piano__form__description__list"
+                            <ol id={`${bookPianoID}__form__description__list`}
                                 className="m-0 py-4 ps-5 ps-md-7">
                                 {[
                                     'Dirtmouth',
@@ -61,26 +52,13 @@ function SectionBook() {
                                 )}
                             </ol>
                         ),
-                        quantityMax: 5,
-                        price: 25,
+                        price: bookPianoPriceEach,
+                        quantityMax: bookPianoQtyMax,
                     },
                     {
-                        id: 'journal',
-                        arrImgSrc: [
-                            {
-                                src: `${journal1}`,
-                                alt: 'journal front',
-                            },
-                            {
-                                src: `${journal2}`,
-                                alt: 'journal back',
-                            },
-                            {
-                                src: `${journal3}`,
-                                alt: 'journal page',
-                            }
-                        ],
-                        heading: "Wanderer's Journal",
+                        id: bookJournalID,
+                        arrImgSrc: bookJournalImages,
+                        heading: bookJournalTitle,
                         description: (
                             <div className="py-4 row gy-5 gx-md-5 text-center">
                                 {[
@@ -114,10 +92,10 @@ function SectionBook() {
                                 )}
                             </div>
                         ),
-                        quantityMax: 3,
-                        price: 29,
+                        price: bookJournalPriceEach,
+                        quantityMax: bookJournalQtyMax,
                     },
-                ].map(({id, arrImgSrc, heading, description, quantityMax, price}, idx) => {
+                ].map(({id, arrImgSrc, heading, description, price, quantityMax}, idx) => {
                     return (
                         <div id={id} key={idx}
                              className="row gy-5 gx-lg-7 mt-5">
