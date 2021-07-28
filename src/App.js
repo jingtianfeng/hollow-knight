@@ -11,41 +11,110 @@ import bookPiano2 from "./img/book/piano-collection-2.png";
 import bookJournal1 from "./img/book/wanderer-journal-1.png";
 import bookJournal2 from "./img/book/wanderer-journal-2.png";
 import bookJournal3 from "./img/book/wanderer-journal-3.png";
+import guide from "./img/illustration-guide2.webp";
+import monster from "./img/illustration-monster2.webp";
+import feather from "./img/illustration-feather.webp";
 
 function App() {
-    const BOOK_PIANO_ID = "piano";
-    const BOOK_PIANO_TITLE = "Piano Collections";
-    const BOOK_PIANO_IMAGES = [
+    const MAP_BOOK_PIANO = new Map();
+    MAP_BOOK_PIANO.set("ID", "piano");
+    MAP_BOOK_PIANO.set("TITLE", "Piano Collections");
+    MAP_BOOK_PIANO.set("QTY_MAX", 5);
+    MAP_BOOK_PIANO.set("PRICE", 25);
+    MAP_BOOK_PIANO.set("IMAGES", [
         {
             src: bookPiano1,
-            alt: `Book Front - ${BOOK_PIANO_TITLE}`,
+            alt: `Book Front - ${MAP_BOOK_PIANO.get("TITLE")}`,
         },
         {
             src: bookPiano2,
-            alt: `Book Back - ${BOOK_PIANO_TITLE}`,
+            alt: `Book Back - ${MAP_BOOK_PIANO.get("TITLE")}`,
         },
-    ];
-    const BOOK_PIANO_PRICE = 25;
-    const BOOK_PIANO_QTY_MAX = 5;
+    ]);
+    MAP_BOOK_PIANO.set("DESCRIPTION", (
+        <ol id={`${MAP_BOOK_PIANO.get("ID")}__form__description__list`}
+            className="m-0 py-4 ps-5 ps-md-7">
+            {[
+                'Dirtmouth',
+                'Crossroads',
+                'Greenpath',
+                'Hornet',
+                'Reflection',
+                'Mantis Lords',
+                'City of Tears',
+                'Resting Grounds',
+                'Dung Defender',
+                "Queen's Gardens",
+                'White Palace',
+                'Sealed Vessel',
+                'Radiance',
+                'Hollow Knight',
+                'Grimm Troupe',
+            ].map((song, songIdx) => {
+                    return (
+                        <li key={songIdx}>
+                            {song}
+                        </li>
+                    )
+                }
+            )}
+        </ol>
+    ))
 
-    const BOOK_JOURNAL_ID = "journal";
-    const BOOK_JOURNAL_TITLE = "Wanderer's Journal";
-    const BOOK_JOURNAL_IMAGES = [
+    const MAP_BOOK_JOURNAL = new Map();
+    MAP_BOOK_JOURNAL.set("ID", "journal");
+    MAP_BOOK_JOURNAL.set("TITLE", "Wanderer's Journal");
+    MAP_BOOK_JOURNAL.set("QTY_MAX", 3);
+    MAP_BOOK_JOURNAL.set("PRICE", 29);
+    MAP_BOOK_JOURNAL.set("IMAGES", [
         {
             src: bookJournal1,
-            alt: `Book Front - ${BOOK_JOURNAL_TITLE}`,
+            alt: `Book Front - ${MAP_BOOK_JOURNAL.get("TITLE")}`,
         },
         {
             src: bookJournal2,
-            alt: `Book Back - ${BOOK_JOURNAL_TITLE}`,
+            alt: `Book Back - ${MAP_BOOK_JOURNAL.get("TITLE")}`,
         },
         {
             src: bookJournal3,
-            alt: `Book Inside - ${BOOK_JOURNAL_TITLE}`,
+            alt: `Book Inside - ${MAP_BOOK_JOURNAL.get("TITLE")}`,
         }
-    ];
-    const BOOK_JOURNAL_PRICE = 29;
-    const BOOK_JOURNAL_QTY_MAX = 3;
+    ]);
+    MAP_BOOK_JOURNAL.set("DESCRIPTION", (
+        <div className="py-4 row gy-5 gx-md-5 text-center">
+            {[
+                {
+                    imgSrc: `${guide}`,
+                    text: 'A comprehensive guide to all of Hallownest\'s varied environments',
+                },
+                {
+                    imgSrc: `${monster}`,
+                    text: 'Friendly faces, fearsome foes, flora, fauna and fungi',
+                },
+                {
+                    imgSrc: `${feather}`,
+                    text: 'A void-black faux leather cover with silver and blue foil',
+                },
+            ].map(({imgSrc, text}, objIdx) => {
+                    return (
+                        <div key={objIdx}
+                             className="col-12 col-md-4">
+                            <img src={imgSrc} alt="guide"
+                                 height="100" width="100"
+                                 className="d-block mx-auto"
+                                 style={{height: 100, width: 100}}/>
+                            <p className="mb-0 mt-3 mx-auto"
+                               style={{maxWidth: 250}}>
+                                {text}
+                            </p>
+                        </div>
+                    )
+                }
+            )}
+        </div>
+    ))
+
+    const ARR_MAP_BOOK = [MAP_BOOK_PIANO, MAP_BOOK_JOURNAL];
 
     return (
         <>
@@ -53,24 +122,9 @@ function App() {
             <SectionCart/>
             <SectionCheckout/>
             <SectionHeader/>
-            <CartItem imgSrc={bookPiano1}
-                      title={BOOK_PIANO_TITLE}
-                      qtyMax={BOOK_PIANO_QTY_MAX}
-                      priceEach={BOOK_PIANO_PRICE}/>
-            <CartItem imgSrc={bookJournal1}
-                      title={BOOK_JOURNAL_TITLE}
-                      qtyMax={BOOK_JOURNAL_QTY_MAX}
-                      priceEach={BOOK_JOURNAL_PRICE}/>
-            <SectionBook bookPianoID={BOOK_PIANO_ID}
-                         bookPianoTitle={BOOK_PIANO_TITLE}
-                         bookPianoImages={BOOK_PIANO_IMAGES}
-                         bookPianoPriceEach={BOOK_PIANO_PRICE}
-                         bookPianoQtyMax={BOOK_PIANO_QTY_MAX}
-                         bookJournalID={BOOK_JOURNAL_ID}
-                         bookJournalTitle={BOOK_JOURNAL_TITLE}
-                         bookJournalImages={BOOK_JOURNAL_IMAGES}
-                         bookJournalPriceEach={BOOK_JOURNAL_PRICE}
-                         bookJournalQtyMax={BOOK_JOURNAL_QTY_MAX}/>
+            <CartItem MAP_BOOK={MAP_BOOK_PIANO}/>
+            <CartItem MAP_BOOK={MAP_BOOK_JOURNAL}/>
+            <SectionBook ARR_MAP_BOOK={ARR_MAP_BOOK}/>
             <SectionComing/>
             <SectionFooter/>
         </>

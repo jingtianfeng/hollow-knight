@@ -1,16 +1,8 @@
 import hrTop from "./img/hr2.png";
 import hrBottom from "./img/hr-bottom.png";
-import guide from "./img/illustration-guide2.webp";
-import monster from "./img/illustration-monster2.webp";
-import feather from "./img/illustration-feather.webp";
 import OptionQuantity from "./OptionQuantity";
 
-function SectionBook(
-    {
-        bookPianoID, bookPianoTitle, bookPianoImages, bookPianoPriceEach, bookPianoQtyMax,
-        bookJournalID, bookJournalTitle, bookJournalImages, bookJournalPriceEach, bookJournalQtyMax,
-    }
-) {
+function SectionBook({ARR_MAP_BOOK}) {
     return (
         <section id="section-book"
                  className="pt-6 pb-7 border-bottom">
@@ -18,164 +10,88 @@ function SectionBook(
                 <h2>
                     Books
                 </h2>
-                {[
-                    {
-                        id: bookPianoID,
-                        arrImgSrc: bookPianoImages,
-                        heading: bookPianoTitle,
-                        description: (
-                            <ol id={`${bookPianoID}__form__description__list`}
-                                className="m-0 py-4 ps-5 ps-md-7">
-                                {[
-                                    'Dirtmouth',
-                                    'Crossroads',
-                                    'Greenpath',
-                                    'Hornet',
-                                    'Reflection',
-                                    'Mantis Lords',
-                                    'City of Tears',
-                                    'Resting Grounds',
-                                    'Dung Defender',
-                                    "Queen's Gardens",
-                                    'White Palace',
-                                    'Sealed Vessel',
-                                    'Radiance',
-                                    'Hollow Knight',
-                                    'Grimm Troupe',
-                                ].map((song, songIdx) => {
-                                        return (
-                                            <li key={songIdx}>
-                                                {song}
-                                            </li>
-                                        )
-                                    }
-                                )}
-                            </ol>
-                        ),
-                        price: bookPianoPriceEach,
-                        quantityMax: bookPianoQtyMax,
-                    },
-                    {
-                        id: bookJournalID,
-                        arrImgSrc: bookJournalImages,
-                        heading: bookJournalTitle,
-                        description: (
-                            <div className="py-4 row gy-5 gx-md-5 text-center">
-                                {[
-                                    {
-                                        imgSrc: `${guide}`,
-                                        text: 'A comprehensive guide to all of Hallownest\'s varied environments',
-                                    },
-                                    {
-                                        imgSrc: `${monster}`,
-                                        text: 'Friendly faces, fearsome foes, flora, fauna and fungi',
-                                    },
-                                    {
-                                        imgSrc: `${feather}`,
-                                        text: 'A void-black faux leather cover with silver and blue foil',
-                                    },
-                                ].map(({imgSrc, text}, objIdx) => {
-                                        return (
-                                            <div key={objIdx}
-                                                 className="col-12 col-md-4">
-                                                <img src={imgSrc} alt="guide"
-                                                     height="100" width="100"
-                                                     className="d-block mx-auto"
-                                                     style={{height: 100, width: 100}}/>
-                                                <p className="mb-0 mt-3 mx-auto"
-                                                   style={{maxWidth: 250}}>
-                                                    {text}
-                                                </p>
-                                            </div>
-                                        )
-                                    }
-                                )}
-                            </div>
-                        ),
-                        price: bookJournalPriceEach,
-                        quantityMax: bookJournalQtyMax,
-                    },
-                ].map(({id, arrImgSrc, heading, description, price, quantityMax}, idx) => {
-                    return (
-                        <div id={id} key={idx}
-                             className="row gy-5 gx-lg-7 mt-5">
-                            <div className="col-12 col-lg-5">
-                                <div id={`${id}__carousel`}
-                                     className="carousel slide"
-                                     data-bs-interval="false"
-                                     data-bs-wrap="true">
-                                    <div className="carousel-indicators">
-                                        {arrImgSrc.map((_, imgIdx) => {
-                                            return (
-                                                <button type="button"
-                                                        key={imgIdx}
-                                                        className={`rounded-circle ${imgIdx === 0 ? 'active' : ''}`}
-                                                        data-bs-target={`#${id}__carousel`}
-                                                        data-bs-slide-to={imgIdx}
-                                                        aria-label={`slide ${imgIdx + 1}`}
-                                                        aria-current={imgIdx === 0}/>
-                                            )
-                                        })}
-                                    </div>
-                                    <div className="carousel-inner">
-                                        {arrImgSrc.map((imgObj, imgIdx) => {
-                                            return (
-                                                <div key={imgIdx}
-                                                     className={`carousel-item ${imgIdx === 0 ? 'active' : ''}`}>
-                                                    <img src={imgObj.src} alt={imgObj.alt}
-                                                         height="auto" width="600"
-                                                         className="d-block w-100"/>
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                    <button type="button"
-                                            className="carousel-control-prev"
-                                            data-bs-target={`#${id}__carousel`}
-                                            data-bs-slide="prev">
+                {
+                    ARR_MAP_BOOK.map((MAP_BOOK, idx) => {
+                        return (
+                            <div id={MAP_BOOK.get("ID")} key={idx}
+                                 className="row gy-5 gx-lg-7 mt-5">
+                                <div className="col-12 col-lg-5">
+                                    <div id={`${MAP_BOOK.get("ID")}__carousel`}
+                                         className="carousel slide"
+                                         data-bs-interval="false"
+                                         data-bs-wrap="true">
+                                        <div className="carousel-indicators">
+                                            {MAP_BOOK.get("IMAGES").map((_, imgIdx) => {
+                                                return (
+                                                    <button type="button"
+                                                            key={imgIdx}
+                                                            className={`rounded-circle ${imgIdx === 0 ? 'active' : ''}`}
+                                                            data-bs-target={`#${MAP_BOOK.get("ID")}__carousel`}
+                                                            data-bs-slide-to={imgIdx}
+                                                            aria-label={`slide ${imgIdx + 1}`}
+                                                            aria-current={imgIdx === 0}/>
+                                                )
+                                            })}
+                                        </div>
+                                        <div className="carousel-inner">
+                                            {MAP_BOOK.get("IMAGES").map((imgObj, imgIdx) => {
+                                                return (
+                                                    <div key={imgIdx}
+                                                         className={`carousel-item ${imgIdx === 0 ? 'active' : ''}`}>
+                                                        <img src={imgObj.src} alt={imgObj.alt}
+                                                             height="auto" width="600"
+                                                             className="d-block w-100"/>
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                        <button type="button"
+                                                className="carousel-control-prev"
+                                                data-bs-target={`#${MAP_BOOK.get("ID")}__carousel`}
+                                                data-bs-slide="prev">
                                         <span className="carousel-control-prev-icon"
                                               aria-hidden="true"/>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button type="button"
-                                            className="carousel-control-next"
-                                            data-bs-target={`#${id}__carousel`}
-                                            data-bs-slide="next">
+                                            <span className="visually-hidden">Previous</span>
+                                        </button>
+                                        <button type="button"
+                                                className="carousel-control-next"
+                                                data-bs-target={`#${MAP_BOOK.get("ID")}__carousel`}
+                                                data-bs-slide="next">
                                         <span className="carousel-control-next-icon"
                                               aria-hidden="true"/>
-                                        <span className="visually-hidden">Next</span>
+                                            <span className="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id={`${MAP_BOOK.get("ID")}__form`}
+                                     className="col-12 col-lg-7">
+                                    <h3 id={`${MAP_BOOK.get("ID")}__form__title`}
+                                        className="h3 text-center">
+                                        {MAP_BOOK.get("TITLE")}
+                                    </h3>
+                                    <div id={`${MAP_BOOK.get("ID")}__form__description`}
+                                         className="my-4">
+                                        <img src={hrTop} alt="hr"
+                                             height="auto" width="600"
+                                             className="w-100"/>
+                                        {MAP_BOOK.get("DESCRIPTION")}
+                                        <img src={hrBottom} alt="hr"
+                                             height="auto" width="600"
+                                             className="w-100"/>
+                                    </div>
+                                    <OptionQuantity max={MAP_BOOK.get("QTY_MAX")}/>
+                                    <div id={`${MAP_BOOK.get("ID")}__form__price`}>
+                                        {`$${MAP_BOOK.get("PRICE")}`}
+                                    </div>
+                                    <button type="button"
+                                            id={`${MAP_BOOK.get("ID")}__form__button`}
+                                            className="btn btn-primary btn-lg">
+                                        add to cart
                                     </button>
                                 </div>
                             </div>
-                            <div id={`${id}__form`}
-                                 className="col-12 col-lg-7">
-                                <h3 id={`${id}__form__title`}
-                                    className="h3 text-center">
-                                    {heading}
-                                </h3>
-                                <div id={`${id}__form__description`}
-                                     className="my-4">
-                                    <img src={hrTop} alt="hr"
-                                         height="auto" width="600"
-                                         className="w-100"/>
-                                    {description}
-                                    <img src={hrBottom} alt="hr"
-                                         height="auto" width="600"
-                                         className="w-100"/>
-                                </div>
-                                <OptionQuantity max={quantityMax}/>
-                                <div id={`${id}__form__price`}>
-                                    {`$${price}`}
-                                </div>
-                                <button type="button"
-                                        id={`${id}__form__button`}
-                                        className="btn btn-primary btn-lg">
-                                    add to cart
-                                </button>
-                            </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
             </div>
         </section>
     )
