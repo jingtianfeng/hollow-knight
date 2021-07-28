@@ -1,8 +1,10 @@
 import hrTop from "./img/hr2.png";
 import hrBottom from "./img/hr-bottom.png";
-import OptionQuantity from "./OptionQuantity";
+import {useState} from "react";
 
 function SectionBook({ARR_MAP_BOOK}) {
+    let [stateQuantity, setQuantity] = useState(1);
+
     return (
         <section id="section-book"
                  className="pt-6 pb-7 border-bottom">
@@ -79,7 +81,26 @@ function SectionBook({ARR_MAP_BOOK}) {
                                              height="auto" width="600"
                                              className="w-100"/>
                                     </div>
-                                    <OptionQuantity max={MAP_BOOK.get("QTY_MAX")}/>
+                                    <div id={`${MAP_BOOK.get("ID")}__form__qty`}
+                                         className="input-group input-group-lg">
+                                        <button type="button"
+                                                className="input-group-text btn fw-bold"
+                                                onClick={() => setQuantity(stateQuantity - 1)}
+                                                disabled={stateQuantity <= 1}>
+                                            -
+                                        </button>
+                                        <input type="text" min={1} max={MAP_BOOK.get("QTY_MAX")}
+                                               value={stateQuantity}
+                                               className="form-control border-0 p-0 bg-transparent text-center fs-1 pe-none user-select-none"
+                                               style={{maxWidth: '1em'}}
+                                               readOnly={true} aria-readonly={true} aria-label="option - quantity"/>
+                                        <button type="button"
+                                                className="input-group-text btn fw-bold"
+                                                onClick={() => setQuantity(stateQuantity + 1)}
+                                                disabled={stateQuantity >= MAP_BOOK.get("QTY_MAX")}>
+                                            +
+                                        </button>
+                                    </div>
                                     <div id={`${MAP_BOOK.get("ID")}__form__price`}>
                                         {`$${MAP_BOOK.get("PRICE")}`}
                                     </div>

@@ -14,6 +14,7 @@ import bookJournal3 from "./img/book/wanderer-journal-3.png";
 import guide from "./img/illustration-guide2.webp";
 import monster from "./img/illustration-monster2.webp";
 import feather from "./img/illustration-feather.webp";
+import {useState} from "react";
 
 function App() {
     const MAP_BOOK_PIANO = new Map();
@@ -60,6 +61,7 @@ function App() {
             )}
         </ol>
     ))
+    let [stateBookPianoQtyCart, setBookPianoQtyCart] = useState(0);
 
     const MAP_BOOK_JOURNAL = new Map();
     MAP_BOOK_JOURNAL.set("ID", "journal");
@@ -113,6 +115,7 @@ function App() {
             )}
         </div>
     ))
+    let [stateBookJournalQtyCart, setBookJournalQtyCart] = useState(0);
 
     const ARR_MAP_BOOK = [MAP_BOOK_PIANO, MAP_BOOK_JOURNAL];
 
@@ -122,8 +125,12 @@ function App() {
             <SectionCart/>
             <SectionCheckout/>
             <SectionHeader/>
-            <CartItem MAP_BOOK={MAP_BOOK_PIANO}/>
-            <CartItem MAP_BOOK={MAP_BOOK_JOURNAL}/>
+            <CartItem MAP_BOOK={MAP_BOOK_PIANO}
+                      stateBookQty={stateBookPianoQtyCart}
+                      setBookQty={setBookPianoQtyCart}/>
+            <CartItem MAP_BOOK={MAP_BOOK_JOURNAL}
+                      stateBookQty={stateBookJournalQtyCart}
+                      setBookQty={setBookJournalQtyCart}/>
             <SectionBook ARR_MAP_BOOK={ARR_MAP_BOOK}/>
             <SectionComing/>
             <SectionFooter/>

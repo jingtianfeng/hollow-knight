@@ -1,6 +1,4 @@
-import OptionQuantity from "./OptionQuantity";
-
-function CartItem({MAP_BOOK}) {
+function CartItem({MAP_BOOK, stateBookQty, setBookQty}) {
     return (
         <div className="row position-relative pt-4 pb-2 pe-4">
             <div className="col col-4">
@@ -20,7 +18,25 @@ function CartItem({MAP_BOOK}) {
                 <div className="row row-cols-auto align-items-center justify-content-between">
                     <div className="col"
                          style={{marginLeft: '-1rem'}}>
-                        <OptionQuantity max={MAP_BOOK.get("QTY_MAX")}/>
+                        <div className="input-group input-group-lg">
+                            <button type="button"
+                                    className="input-group-text btn fw-bold"
+                                    onClick={() => setBookQty(stateBookQty - 1)}
+                                    disabled={stateBookQty <= 1}>
+                                -
+                            </button>
+                            <input type="text" min={1} max={MAP_BOOK.get("QTY_MAX")}
+                                   value={stateBookQty}
+                                   className="form-control border-0 p-0 bg-transparent text-center fs-1 pe-none user-select-none"
+                                   style={{maxWidth: '1em'}}
+                                   readOnly={true} aria-readonly={true} aria-label="option - quantity"/>
+                            <button type="button"
+                                    className="input-group-text btn fw-bold"
+                                    onClick={() => setBookQty(stateBookQty + 1)}
+                                    disabled={stateBookQty >= MAP_BOOK.get("QTY_MAX")}>
+                                +
+                            </button>
+                        </div>
                     </div>
                     <div className="col">
                         <span className="fs-3">
@@ -32,7 +48,8 @@ function CartItem({MAP_BOOK}) {
             <button type="button"
                     className="btn-close position-absolute"
                     style={{top: 20, right: 30}}
-                    aria-label="delete cart item"/>
+                    aria-label="delete cart item"
+                    onClick={() => setBookQty(0)}/>
         </div>
     )
 }
