@@ -126,6 +126,19 @@ function SectionBook({arrBook}) {
                                             }}>
                                         add to cart
                                     </button>
+                                    <p id={`${ID}__form__status`}>
+                                        {
+                                            stateCartQty > 0 ?
+                                                `Added ${stateCartQty} to your cart!` :
+                                                null
+                                        }
+                                        <br/>
+                                        {
+                                            stateCartQty >= QTY_MAX ?
+                                                `Max ${QTY_MAX} allowed.` :
+                                                null
+                                        }
+                                    </p>
                                 </div>
                             </div>
                         )
