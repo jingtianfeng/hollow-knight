@@ -123,19 +123,18 @@ function SectionBook({arrBook}) {
                                                 } else {
                                                     setCartQty(stateCartQty + stateFormQty);
                                                 }
-                                            }}>
-                                        add to cart
+                                            }}
+                                            disabled={stateCartQty >= QTY_MAX}>
+                                        {
+                                            stateCartQty < QTY_MAX ?
+                                                "Add to cart" :
+                                                `Max ${QTY_MAX} allowed`
+                                        }
                                     </button>
                                     <p id={`${ID}__form__status`}>
                                         {
                                             stateCartQty > 0 ?
                                                 `Added ${stateCartQty} to your cart!` :
-                                                null
-                                        }
-                                        <br/>
-                                        {
-                                            stateCartQty >= QTY_MAX ?
-                                                `Max ${QTY_MAX} allowed.` :
                                                 null
                                         }
                                     </p>
