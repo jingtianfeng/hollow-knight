@@ -6,14 +6,14 @@ import SectionBook from "./SectionBook";
 import SectionComing from "./SectionComing";
 import SectionFooter from "./SectionFooter";
 import CartItem from "./CartItem";
-import bookPiano1 from "./img/book/piano-collection-1.png";
-import bookPiano2 from "./img/book/piano-collection-2.png";
-import bookJournal1 from "./img/book/wanderer-journal-1.png";
-import bookJournal2 from "./img/book/wanderer-journal-2.png";
-import bookJournal3 from "./img/book/wanderer-journal-3.png";
-import guide from "./img/illustration-guide2.webp";
-import monster from "./img/illustration-monster2.webp";
-import feather from "./img/illustration-feather.webp";
+import imgPiano1 from "./img/book/piano-collection-1.png";
+import imgPiano2 from "./img/book/piano-collection-2.png";
+import imgJournal1 from "./img/book/wanderer-journal-1.png";
+import imgJournal2 from "./img/book/wanderer-journal-2.png";
+import imgJournal3 from "./img/book/wanderer-journal-3.png";
+import illGuide from "./img/illustration-guide2.webp";
+import illMonster from "./img/illustration-monster2.webp";
+import illFeather from "./img/illustration-feather.webp";
 import {useState} from "react";
 
 function App() {
@@ -25,11 +25,11 @@ function App() {
     };
     piano.IMAGES = [
         {
-            src: bookPiano1,
+            src: imgPiano1,
             alt: `Book Front - ${piano.TITLE}`,
         },
         {
-            src: bookPiano2,
+            src: imgPiano2,
             alt: `Book Back - ${piano.TITLE}`,
         },
     ];
@@ -74,15 +74,15 @@ function App() {
     }
     journal.IMAGES = [
         {
-            src: bookJournal1,
+            src: imgJournal1,
             alt: `Book Front - ${journal.TITLE}`,
         },
         {
-            src: bookJournal2,
+            src: imgJournal2,
             alt: `Book Back - ${journal.TITLE}`,
         },
         {
-            src: bookJournal3,
+            src: imgJournal3,
             alt: `Book Inside - ${journal.TITLE}`,
         }
     ];
@@ -90,15 +90,15 @@ function App() {
         <div className="py-4 row gy-5 gx-md-5 text-center">
             {[
                 {
-                    imgSrc: `${guide}`,
+                    imgSrc: `${illGuide}`,
                     text: 'A comprehensive guide to all of Hallownest\'s varied environments',
                 },
                 {
-                    imgSrc: `${monster}`,
+                    imgSrc: `${illMonster}`,
                     text: 'Friendly faces, fearsome foes, flora, fauna and fungi',
                 },
                 {
-                    imgSrc: `${feather}`,
+                    imgSrc: `${illFeather}`,
                     text: 'A void-black faux leather cover with silver and blue foil',
                 },
             ].map(({imgSrc, text}, objIdx) => {
