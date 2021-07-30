@@ -62,9 +62,12 @@ function App() {
             )}
         </ol>
     );
-    let [statePianoQtyCart, setPianoQtyCart] = useState(0);
-    piano.stateQtyCart = statePianoQtyCart;
-    piano.setQtyCart = setPianoQtyCart;
+    let [stateCartPianoQty, setCartPianoQty] = useState(0);
+    piano.stateCartQty = stateCartPianoQty;
+    piano.setCartQty = setCartPianoQty;
+    let [stateFormPianoQty, setFormPianoQty] = useState(1);
+    piano.stateFormQty = stateFormPianoQty;
+    piano.setFormQty = setFormPianoQty;
 
     const journal = {
         ID: "journal",
@@ -119,9 +122,12 @@ function App() {
             )}
         </div>
     );
-    let [stateJournalQtyCart, setJournalQtyCart] = useState(0);
-    journal.stateQtyCart = stateJournalQtyCart;
-    journal.setQtyCart = setJournalQtyCart;
+    let [stateCartJournalQty, setCartJournalQty] = useState(0);
+    journal.stateCartQty = stateCartJournalQty;
+    journal.setCartQty = setCartJournalQty;
+    let [stateFormJournalQty, setFormJournalQty] = useState(1);
+    journal.stateFormQty = stateFormJournalQty;
+    journal.setFormQty = setFormJournalQty;
 
     const arrBook = [piano, journal];
 
