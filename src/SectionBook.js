@@ -2,7 +2,7 @@ import hrTop from "./img/hr2.png";
 import hrBottom from "./img/hr-bottom.png";
 import {useState} from "react";
 
-function SectionBook({ARR_MAP_BOOK}) {
+function SectionBook({arrBook}) {
     let [stateQuantity, setQuantity] = useState(1);
 
     return (
@@ -13,22 +13,22 @@ function SectionBook({ARR_MAP_BOOK}) {
                     Books
                 </h2>
                 {
-                    ARR_MAP_BOOK.map((MAP_BOOK, idx) => {
+                    arrBook.map((book, idx) => {
                         return (
-                            <div id={MAP_BOOK.get("ID")} key={idx}
+                            <div id={book.ID} key={idx}
                                  className="row gy-5 gx-lg-7 mt-5">
                                 <div className="col-12 col-lg-5">
-                                    <div id={`${MAP_BOOK.get("ID")}__carousel`}
+                                    <div id={`${book.ID}__carousel`}
                                          className="carousel slide"
                                          data-bs-interval="false"
                                          data-bs-wrap="true">
                                         <div className="carousel-indicators">
-                                            {MAP_BOOK.get("IMAGES").map((_, imgIdx) => {
+                                            {book.IMAGES.map((_, imgIdx) => {
                                                 return (
                                                     <button type="button"
                                                             key={imgIdx}
                                                             className={`rounded-circle ${imgIdx === 0 ? 'active' : ''}`}
-                                                            data-bs-target={`#${MAP_BOOK.get("ID")}__carousel`}
+                                                            data-bs-target={`#${book.ID}__carousel`}
                                                             data-bs-slide-to={imgIdx}
                                                             aria-label={`slide ${imgIdx + 1}`}
                                                             aria-current={imgIdx === 0}/>
@@ -36,7 +36,7 @@ function SectionBook({ARR_MAP_BOOK}) {
                                             })}
                                         </div>
                                         <div className="carousel-inner">
-                                            {MAP_BOOK.get("IMAGES").map((imgObj, imgIdx) => {
+                                            {book.IMAGES.map((imgObj, imgIdx) => {
                                                 return (
                                                     <div key={imgIdx}
                                                          className={`carousel-item ${imgIdx === 0 ? 'active' : ''}`}>
@@ -49,7 +49,7 @@ function SectionBook({ARR_MAP_BOOK}) {
                                         </div>
                                         <button type="button"
                                                 className="carousel-control-prev"
-                                                data-bs-target={`#${MAP_BOOK.get("ID")}__carousel`}
+                                                data-bs-target={`#${book.ID}__carousel`}
                                                 data-bs-slide="prev">
                                         <span className="carousel-control-prev-icon"
                                               aria-hidden="true"/>
@@ -57,7 +57,7 @@ function SectionBook({ARR_MAP_BOOK}) {
                                         </button>
                                         <button type="button"
                                                 className="carousel-control-next"
-                                                data-bs-target={`#${MAP_BOOK.get("ID")}__carousel`}
+                                                data-bs-target={`#${book.ID}__carousel`}
                                                 data-bs-slide="next">
                                         <span className="carousel-control-next-icon"
                                               aria-hidden="true"/>
@@ -65,23 +65,23 @@ function SectionBook({ARR_MAP_BOOK}) {
                                         </button>
                                     </div>
                                 </div>
-                                <div id={`${MAP_BOOK.get("ID")}__form`}
+                                <div id={`${book.ID}__form`}
                                      className="col-12 col-lg-7">
-                                    <h3 id={`${MAP_BOOK.get("ID")}__form__title`}
+                                    <h3 id={`${book.ID}__form__title`}
                                         className="h3 text-center">
-                                        {MAP_BOOK.get("TITLE")}
+                                        {book.TITLE}
                                     </h3>
-                                    <div id={`${MAP_BOOK.get("ID")}__form__description`}
+                                    <div id={`${book.ID}__form__description`}
                                          className="my-4">
                                         <img src={hrTop} alt="hr"
                                              height="auto" width="600"
                                              className="w-100"/>
-                                        {MAP_BOOK.get("DESCRIPTION")}
+                                        {book.DESCRIPTION}
                                         <img src={hrBottom} alt="hr"
                                              height="auto" width="600"
                                              className="w-100"/>
                                     </div>
-                                    <div id={`${MAP_BOOK.get("ID")}__form__qty`}
+                                    <div id={`${book.ID}__form__qty`}
                                          className="input-group input-group-lg">
                                         <button type="button"
                                                 className="input-group-text btn fw-bold"
@@ -89,7 +89,7 @@ function SectionBook({ARR_MAP_BOOK}) {
                                                 disabled={stateQuantity <= 1}>
                                             -
                                         </button>
-                                        <input type="text" min={1} max={MAP_BOOK.get("QTY_MAX")}
+                                        <input type="text" min={1} max={book.QTY_MAX}
                                                value={stateQuantity}
                                                className="form-control border-0 p-0 bg-transparent text-center fs-1 pe-none user-select-none"
                                                style={{maxWidth: '1em'}}
@@ -97,15 +97,15 @@ function SectionBook({ARR_MAP_BOOK}) {
                                         <button type="button"
                                                 className="input-group-text btn fw-bold"
                                                 onClick={() => setQuantity(stateQuantity + 1)}
-                                                disabled={stateQuantity >= MAP_BOOK.get("QTY_MAX")}>
+                                                disabled={stateQuantity >= book.QTY_MAX}>
                                             +
                                         </button>
                                     </div>
-                                    <div id={`${MAP_BOOK.get("ID")}__form__price`}>
-                                        {`$${MAP_BOOK.get("PRICE")}`}
+                                    <div id={`${book.ID}__form__price`}>
+                                        {`$${book.PRICE}`}
                                     </div>
                                     <button type="button"
-                                            id={`${MAP_BOOK.get("ID")}__form__button`}
+                                            id={`${book.ID}__form__button`}
                                             className="btn btn-primary btn-lg">
                                         add to cart
                                     </button>

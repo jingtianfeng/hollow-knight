@@ -17,23 +17,24 @@ import feather from "./img/illustration-feather.webp";
 import {useState} from "react";
 
 function App() {
-    const MAP_BOOK_PIANO = new Map();
-    MAP_BOOK_PIANO.set("ID", "piano");
-    MAP_BOOK_PIANO.set("TITLE", "Piano Collections");
-    MAP_BOOK_PIANO.set("QTY_MAX", 5);
-    MAP_BOOK_PIANO.set("PRICE", 25);
-    MAP_BOOK_PIANO.set("IMAGES", [
+    const piano = {
+        ID: "piano",
+        TITLE: "Piano Collections",
+        QTY_MAX: 5,
+        PRICE: 25,
+    };
+    piano.IMAGES = [
         {
             src: bookPiano1,
-            alt: `Book Front - ${MAP_BOOK_PIANO.get("TITLE")}`,
+            alt: `Book Front - ${piano.TITLE}`,
         },
         {
             src: bookPiano2,
-            alt: `Book Back - ${MAP_BOOK_PIANO.get("TITLE")}`,
+            alt: `Book Back - ${piano.TITLE}`,
         },
-    ]);
-    MAP_BOOK_PIANO.set("DESCRIPTION", (
-        <ol id={`${MAP_BOOK_PIANO.get("ID")}__form__description__list`}
+    ];
+    piano.DESCRIPTION = (
+        <ol id={`${piano.ID}__form__description__list`}
             className="m-0 py-4 ps-5 ps-md-7">
             {[
                 'Dirtmouth',
@@ -60,31 +61,32 @@ function App() {
                 }
             )}
         </ol>
-    ))
-    let [stateBookPianoQtyCart, setBookPianoQtyCart] = useState(0);
-    MAP_BOOK_PIANO.set("stateBookQtyCart", stateBookPianoQtyCart);
-    MAP_BOOK_PIANO.set("setBookQtyCart", setBookPianoQtyCart);
+    );
+    let [statePianoQtyCart, setPianoQtyCart] = useState(0);
+    piano.stateQtyCart = statePianoQtyCart;
+    piano.setQtyCart = setPianoQtyCart;
 
-    const MAP_BOOK_JOURNAL = new Map();
-    MAP_BOOK_JOURNAL.set("ID", "journal");
-    MAP_BOOK_JOURNAL.set("TITLE", "Wanderer's Journal");
-    MAP_BOOK_JOURNAL.set("QTY_MAX", 3);
-    MAP_BOOK_JOURNAL.set("PRICE", 29);
-    MAP_BOOK_JOURNAL.set("IMAGES", [
+    const journal = {
+        ID: "journal",
+        TITLE: "Wanderer's Journal",
+        QTY_MAX: 3,
+        PRICE: 29,
+    }
+    journal.IMAGES = [
         {
             src: bookJournal1,
-            alt: `Book Front - ${MAP_BOOK_JOURNAL.get("TITLE")}`,
+            alt: `Book Front - ${journal.TITLE}`,
         },
         {
             src: bookJournal2,
-            alt: `Book Back - ${MAP_BOOK_JOURNAL.get("TITLE")}`,
+            alt: `Book Back - ${journal.TITLE}`,
         },
         {
             src: bookJournal3,
-            alt: `Book Inside - ${MAP_BOOK_JOURNAL.get("TITLE")}`,
+            alt: `Book Inside - ${journal.TITLE}`,
         }
-    ]);
-    MAP_BOOK_JOURNAL.set("DESCRIPTION", (
+    ];
+    journal.DESCRIPTION = (
         <div className="py-4 row gy-5 gx-md-5 text-center">
             {[
                 {
@@ -116,12 +118,12 @@ function App() {
                 }
             )}
         </div>
-    ))
-    let [stateBookJournalQtyCart, setBookJournalQtyCart] = useState(0);
-    MAP_BOOK_JOURNAL.set("stateBookQtyCart", stateBookJournalQtyCart);
-    MAP_BOOK_JOURNAL.set("setBookQtyCart", setBookJournalQtyCart);
+    );
+    let [stateJournalQtyCart, setJournalQtyCart] = useState(0);
+    journal.stateQtyCart = stateJournalQtyCart;
+    journal.setQtyCart = setJournalQtyCart;
 
-    const ARR_MAP_BOOK = [MAP_BOOK_PIANO, MAP_BOOK_JOURNAL];
+    const arrBook = [piano, journal];
 
     return (
         <>
@@ -129,9 +131,9 @@ function App() {
             <SectionCart/>
             <SectionCheckout/>
             <SectionHeader/>
-            <CartItem MAP_BOOK={MAP_BOOK_PIANO}/>
-            <CartItem MAP_BOOK={MAP_BOOK_JOURNAL}/>
-            <SectionBook ARR_MAP_BOOK={ARR_MAP_BOOK}/>
+            <CartItem book={piano}/>
+            <CartItem book={journal}/>
+            <SectionBook arrBook={arrBook}/>
             <SectionComing/>
             <SectionFooter/>
         </>
