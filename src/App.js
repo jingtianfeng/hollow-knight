@@ -62,6 +62,8 @@ function App() {
         </ol>
     ))
     let [stateBookPianoQtyCart, setBookPianoQtyCart] = useState(0);
+    MAP_BOOK_PIANO.set("stateBookQtyCart", stateBookPianoQtyCart);
+    MAP_BOOK_PIANO.set("setBookQtyCart", setBookPianoQtyCart);
 
     const MAP_BOOK_JOURNAL = new Map();
     MAP_BOOK_JOURNAL.set("ID", "journal");
@@ -116,6 +118,8 @@ function App() {
         </div>
     ))
     let [stateBookJournalQtyCart, setBookJournalQtyCart] = useState(0);
+    MAP_BOOK_JOURNAL.set("stateBookQtyCart", stateBookJournalQtyCart);
+    MAP_BOOK_JOURNAL.set("setBookQtyCart", setBookJournalQtyCart);
 
     const ARR_MAP_BOOK = [MAP_BOOK_PIANO, MAP_BOOK_JOURNAL];
 
@@ -125,12 +129,8 @@ function App() {
             <SectionCart/>
             <SectionCheckout/>
             <SectionHeader/>
-            <CartItem MAP_BOOK={MAP_BOOK_PIANO}
-                      stateBookQty={stateBookPianoQtyCart}
-                      setBookQty={setBookPianoQtyCart}/>
-            <CartItem MAP_BOOK={MAP_BOOK_JOURNAL}
-                      stateBookQty={stateBookJournalQtyCart}
-                      setBookQty={setBookJournalQtyCart}/>
+            <CartItem MAP_BOOK={MAP_BOOK_PIANO}/>
+            <CartItem MAP_BOOK={MAP_BOOK_JOURNAL}/>
             <SectionBook ARR_MAP_BOOK={ARR_MAP_BOOK}/>
             <SectionComing/>
             <SectionFooter/>

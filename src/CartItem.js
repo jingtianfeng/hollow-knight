@@ -1,4 +1,7 @@
-function CartItem({MAP_BOOK, stateBookQty, setBookQty}) {
+function CartItem({MAP_BOOK}) {
+    let stateBookQty = MAP_BOOK.get("stateBookQtyCart");
+    let setBookQty = MAP_BOOK.get("setBookQtyCart");
+    
     return (
         <div className="row position-relative pt-4 pb-2 pe-4">
             <div className="col col-4">
