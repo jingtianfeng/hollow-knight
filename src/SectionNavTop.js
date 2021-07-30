@@ -1,6 +1,6 @@
 import icon from "./img/icon/white-32.png";
 
-function SectionNavTop() {
+function SectionNavTop({qtyTotal}) {
     return (
         <nav id="navbar"
              className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"
@@ -28,8 +28,8 @@ function SectionNavTop() {
                     CART
                     <span className="badge rounded-pill text-body
                                          position-absolute top-0 start-100 translate-middle-x">
-                            1
-                            <span className="visually-hidden">number of items in shopping cart</span>
+                            {qtyTotal > 0 ? qtyTotal : null}
+                        <span className="visually-hidden">{qtyTotal} items in shopping cart</span>
                         </span>
                 </div>
                 <div id="navbar__container__menu"

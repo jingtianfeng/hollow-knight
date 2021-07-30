@@ -133,7 +133,7 @@ function App() {
 
     return (
         <>
-            <SectionNavTop/>
+            <SectionNavTop qtyTotal={stateCartPianoQty + stateCartJournalQty}/>
             <SectionCart/>
             <SectionCheckout/>
             <SectionHeader/>
