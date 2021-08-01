@@ -5,7 +5,6 @@ import SectionHeader from "./SectionHeader";
 import SectionBook from "./SectionBook";
 import SectionComing from "./SectionComing";
 import SectionFooter from "./SectionFooter";
-import CartItem from "./CartItem";
 import imgPiano1 from "./img/book/piano-collection-1.png";
 import imgPiano2 from "./img/book/piano-collection-2.png";
 import imgJournal1 from "./img/book/wanderer-journal-1.png";
@@ -134,11 +133,9 @@ function App() {
     return (
         <>
             <SectionNavTop qtyTotal={stateCartPianoQty + stateCartJournalQty}/>
-            <SectionCart/>
+            <SectionCart arrBook={arrBook}/>
             <SectionCheckout/>
             <SectionHeader/>
-            <CartItem book={piano}/>
-            <CartItem book={journal}/>
             <SectionBook arrBook={arrBook}/>
             <SectionComing/>
             <SectionFooter/>
