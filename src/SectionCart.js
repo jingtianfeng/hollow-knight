@@ -21,7 +21,8 @@ function SectionCart({arrBook}) {
             </div>
             <div id="cart__body"
                  className="offcanvas-body">
-                <ul className="list-group">
+                <ul id="cart__body__items"
+                    className="list-group">
                     {arrBook.map((bookObj, cartItemIdx) => {
                         return (
                             <li key={cartItemIdx}
@@ -31,6 +32,17 @@ function SectionCart({arrBook}) {
                         )
                     })}
                 </ul>
+                <div className="row row-cols-auto justify-content-between">
+                    <span className="col">
+                        Subtotal:
+                    </span>
+                    <span className="col">
+                        $
+                        {arrBook.reduce((acc, bookObj) => {
+                            return acc + bookObj.stateCartQty * bookObj.PRICE;
+                        }, 0)}
+                    </span>
+                </div>
                 <button type="button"
                         id="cart__body__checkout"
                         className="btn btn-primary"
