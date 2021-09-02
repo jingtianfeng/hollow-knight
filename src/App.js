@@ -20,43 +20,43 @@ function App() {
         ID: "piano",
         TITLE: "Piano Collections",
         QTY_MAX: 5,
-        PRICE: 25,
+        PRICE: 25
     };
     piano.IMAGES = [
         {
             src: imgPiano1,
-            alt: `Book Front - ${piano.TITLE}`,
+            alt: `Book Front - ${piano.TITLE}`
         },
         {
             src: imgPiano2,
-            alt: `Book Back - ${piano.TITLE}`,
-        },
+            alt: `Book Back - ${piano.TITLE}`
+        }
     ];
     piano.DESCRIPTION = (
         <ol id={`${piano.ID}__form__description__list`}
             className="m-0 py-4 ps-5 ps-md-7">
             {[
-                'Dirtmouth',
-                'Crossroads',
-                'Greenpath',
-                'Hornet',
-                'Reflection',
-                'Mantis Lords',
-                'City of Tears',
-                'Resting Grounds',
-                'Dung Defender',
+                "Dirtmouth",
+                "Crossroads",
+                "Greenpath",
+                "Hornet",
+                "Reflection",
+                "Mantis Lords",
+                "City of Tears",
+                "Resting Grounds",
+                "Dung Defender",
                 "Queen's Gardens",
-                'White Palace',
-                'Sealed Vessel',
-                'Radiance',
-                'Hollow Knight',
-                'Grimm Troupe',
+                "White Palace",
+                "Sealed Vessel",
+                "Radiance",
+                "Hollow Knight",
+                "Grimm Troupe"
             ].map((song, songIdx) => {
                     return (
                         <li key={songIdx}>
                             {song}
                         </li>
-                    )
+                    );
                 }
             )}
         </ol>
@@ -72,20 +72,20 @@ function App() {
         ID: "journal",
         TITLE: "Wanderer's Journal",
         QTY_MAX: 3,
-        PRICE: 29,
-    }
+        PRICE: 29
+    };
     journal.IMAGES = [
         {
             src: imgJournal1,
-            alt: `Book Front - ${journal.TITLE}`,
+            alt: `Book Front - ${journal.TITLE}`
         },
         {
             src: imgJournal2,
-            alt: `Book Back - ${journal.TITLE}`,
+            alt: `Book Back - ${journal.TITLE}`
         },
         {
             src: imgJournal3,
-            alt: `Book Inside - ${journal.TITLE}`,
+            alt: `Book Inside - ${journal.TITLE}`
         }
     ];
     journal.DESCRIPTION = (
@@ -93,16 +93,16 @@ function App() {
             {[
                 {
                     imgSrc: `${illGuide}`,
-                    text: 'A comprehensive guide to all of Hallownest\'s varied environments',
+                    text: "A comprehensive guide to all of Hallownest's varied environments"
                 },
                 {
                     imgSrc: `${illMonster}`,
-                    text: 'Friendly faces, fearsome foes, flora, fauna and fungi',
+                    text: "Friendly faces, fearsome foes, flora, fauna and fungi"
                 },
                 {
                     imgSrc: `${illFeather}`,
-                    text: 'A void-black faux leather cover with silver and blue foil',
-                },
+                    text: "A void-black faux leather cover with silver and blue foil"
+                }
             ].map(({imgSrc, text}, objIdx) => {
                     return (
                         <div key={objIdx}
@@ -116,7 +116,7 @@ function App() {
                                 {text}
                             </p>
                         </div>
-                    )
+                    );
                 }
             )}
         </div>
@@ -140,7 +140,7 @@ function App() {
             <SectionComing/>
             <SectionFooter/>
         </>
-    )
+    );
 }
 
 export default App;

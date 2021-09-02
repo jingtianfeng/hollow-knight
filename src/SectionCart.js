@@ -29,7 +29,7 @@ function SectionCart({arrBook}) {
                                 className="list-group-item bg-dark">
                                 <CartItem book={bookObj}/>
                             </li>
-                        )
+                        );
                     })}
                 </ul>
                 <div className="row row-cols-auto justify-content-between">
@@ -53,7 +53,7 @@ function SectionCart({arrBook}) {
                 </button>
             </div>
         </div>
-    )
+    );
 }
 
-export default SectionCart
+export default SectionCart;

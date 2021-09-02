@@ -35,7 +35,7 @@ function SectionFooter() {
                 </p>
             </div>
         </footer>
-    )
+    );
 }
 
-export default SectionFooter
+export default SectionFooter;

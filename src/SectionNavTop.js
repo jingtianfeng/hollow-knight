@@ -4,7 +4,7 @@ function SectionNavTop({qtyTotal}) {
     return (
         <nav id="navbar"
              className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"
-             style={{fontFamily: 'Cinzel', fontWeight: 500}}>
+             style={{fontFamily: "Cinzel", fontWeight: 500}}>
             <div id="navbar__container" className="container">
                 <button id="navbar__container__toggler"
                         className="navbar-toggler fs-6 border-0"
@@ -39,33 +39,33 @@ function SectionNavTop({qtyTotal}) {
                         style={{margin: 12}}>
                         {[
                             {
-                                href: '#top',
-                                text: 'Home',
+                                href: "#top",
+                                text: "Home"
                             },
                             {
-                                href: '#section-book',
-                                text: 'Books',
+                                href: "#section-book",
+                                text: "Books"
                             },
                             {
-                                href: '#section-coming',
-                                text: 'Coming Soon',
+                                href: "#section-coming",
+                                text: "Coming Soon"
                             },
                             {
-                                href: '#footer',
-                                text: 'Newsletter',
-                            },
+                                href: "#footer",
+                                text: "Newsletter"
+                            }
                         ].map(({href, text}, idx) => {
                             return (
                                 <li className="nav-item" key={idx}>
                                     <a href={href} className="nav-link">{text}</a>
                                 </li>
-                            )
+                            );
                         })}
                     </ul>
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
-export default SectionNavTop
+export default SectionNavTop;

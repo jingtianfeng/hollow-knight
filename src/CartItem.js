@@ -16,7 +16,7 @@ function CartItem(
                          maxHeight: 100,
                          maxWidth: 100,
                          marginTop: -8,
-                         marginLeft: -20,
+                         marginLeft: -20
                      }}/>
             </div>
             <div className="col col-9">
@@ -25,7 +25,7 @@ function CartItem(
                 </h3>
                 <div className="row row-cols-auto align-items-center justify-content-between">
                     <div className="col"
-                         style={{marginLeft: '-1rem'}}>
+                         style={{marginLeft: "-1rem"}}>
                         <div className="input-group input-group-lg">
                             <button type="button"
                                     className="input-group-text btn fw-bold"
@@ -40,7 +40,7 @@ function CartItem(
                             <input type="text" min={1} max={QTY_MAX}
                                    value={stateCartQty}
                                    className="form-control border-0 p-0 bg-transparent text-center fs-3 pe-none user-select-none"
-                                   style={{maxWidth: '1em'}}
+                                   style={{maxWidth: "1em"}}
                                    readOnly={true} aria-readonly={true} aria-label="option - quantity"/>
                             <button type="button"
                                     className="input-group-text btn fw-bold"
@@ -67,7 +67,7 @@ function CartItem(
                     aria-label="delete cart item"
                     onClick={() => setCartQty(0)}/>
         </div>
-    )
+    );
 }
 
-export default CartItem
+export default CartItem;

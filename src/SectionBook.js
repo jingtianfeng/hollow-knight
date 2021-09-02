@@ -14,7 +14,7 @@ function SectionBook({arrBook}) {
                         {
                             ID, TITLE, QTY_MAX, PRICE, IMAGES, DESCRIPTION,
                             stateCartQty, setCartQty,
-                            stateFormQty, setFormQty,
+                            stateFormQty, setFormQty
                         }, bookIdx) => {
                         return (
                             <div id={ID} key={bookIdx}
@@ -29,24 +29,24 @@ function SectionBook({arrBook}) {
                                                 return (
                                                     <button type="button"
                                                             key={imgIdx}
-                                                            className={`rounded-circle ${imgIdx === 0 ? 'active' : ''}`}
+                                                            className={`rounded-circle ${imgIdx === 0 ? "active" : ""}`}
                                                             data-bs-target={`#${ID}__carousel`}
                                                             data-bs-slide-to={imgIdx}
                                                             aria-label={`slide ${imgIdx + 1}`}
                                                             aria-current={imgIdx === 0}/>
-                                                )
+                                                );
                                             })}
                                         </div>
                                         <div className="carousel-inner">
                                             {IMAGES.map((imgObj, imgIdx) => {
                                                 return (
                                                     <div key={imgIdx}
-                                                         className={`carousel-item ${imgIdx === 0 ? 'active' : ''}`}>
+                                                         className={`carousel-item ${imgIdx === 0 ? "active" : ""}`}>
                                                         <img src={imgObj.src} alt={imgObj.alt}
                                                              height="auto" width="600"
                                                              className="d-block w-100"/>
                                                     </div>
-                                                )
+                                                );
                                             })}
                                         </div>
                                         <button type="button"
@@ -98,7 +98,7 @@ function SectionBook({arrBook}) {
                                         <input type="text" min={1} max={QTY_MAX}
                                                value={stateFormQty}
                                                className="form-control border-0 p-0 bg-transparent text-center fs-1 pe-none user-select-none"
-                                               style={{maxWidth: '1em'}}
+                                               style={{maxWidth: "1em"}}
                                                readOnly={true} aria-readonly={true} aria-label="option - quantity"/>
                                         <button type="button"
                                                 className="input-group-text btn fw-bold"
@@ -140,11 +140,11 @@ function SectionBook({arrBook}) {
                                     </p>
                                 </div>
                             </div>
-                        )
+                        );
                     })}
             </div>
         </section>
-    )
+    );
 }
 
-export default SectionBook
+export default SectionBook;

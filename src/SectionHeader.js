@@ -1,5 +1,5 @@
 import logo from "./img/logo.png";
-import banner from "./img/banner.png"
+import banner from "./img/banner.png";
 
 function SectionHeader() {
     return (
@@ -18,13 +18,13 @@ function SectionHeader() {
                     className="h1 text-white text-center"
                     style={{
                         opacity: 0.95,
-                        textShadow: '-1px 0 #161a44, 0 1px #161a44, 1px 0 #161a44, 0 -1px #161a44'
+                        textShadow: "-1px 0 #161a44, 0 1px #161a44, 1px 0 #161a44, 0 -1px #161a44"
                     }}>
                     Merch Store
                 </h1>
             </div>
         </header>
-    )
+    );
 }
 
-export default SectionHeader
+export default SectionHeader;

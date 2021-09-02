@@ -27,7 +27,7 @@ function SectionCheckout() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default SectionCheckout
+export default SectionCheckout;

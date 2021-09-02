@@ -16,13 +16,13 @@ function SectionComing() {
                     {[
                         {
                             imgSrc: `${vinylGN2}`,
-                            title: 'Gods & Nightmares',
-                            text: 'vinyl',
+                            title: "Gods & Nightmares",
+                            text: "vinyl"
                         },
                         {
                             imgSrc: `${vinylOriginal2}`,
-                            title: 'Original',
-                            text: 'vinyl',
+                            title: "Original",
+                            text: "vinyl"
                         }
                     ].map(({imgSrc, title, text}, idx) => {
                         return (
@@ -41,12 +41,12 @@ function SectionComing() {
                                     </div>
                                 </div>
                             </div>
-                        )
+                        );
                     })}
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default SectionComing
+export default SectionComing;
