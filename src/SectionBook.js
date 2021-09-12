@@ -1,14 +1,21 @@
 import hrTop from "./img/hr2.png";
 import hrBottom from "./img/hr-bottom.png";
+import marker from "./img/marker3.png";
 
 function SectionBook({arrBook}) {
     return (
         <section id="section-book"
                  className="pt-6 pb-7 border-bottom">
             <div className="container">
-                <h2>
+                <h2 className="text-center">
                     Books
                 </h2>
+                <img src={marker} alt="divider"
+                     className="d-block mx-auto"
+                     style={{width: 24, height: 24, opacity: 0.875}}/>
+                <p className="mt-2 text-center">
+                    (placeholder)
+                </p>
                 {
                     arrBook.map((
                         {
