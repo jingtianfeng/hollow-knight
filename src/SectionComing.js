@@ -1,15 +1,19 @@
 import vinylGN2 from "./img/vinyl/gods-nightmares-2.png";
 import vinylOriginal2 from "./img/vinyl/original-2.png";
+import marker from "./img/marker3.png";
 
 function SectionComing() {
     return (
         <section id="section-coming"
                  className="py-6 border-bottom">
             <div className="container">
-                <h2 className="h2">
+                <h2 className="text-center">
                     Coming Soon
                 </h2>
-                <p>
+                <img src={marker} alt="divider"
+                     className="d-block mx-auto"
+                     style={{width: 24, height: 24, opacity: 0.875}}/>
+                <p className="mt-2 text-center">
                     (placeholder)
                 </p>
                 <div className="row row-cols-1 row-cols-md-2 gy-5 gx-md-5 text-center">
