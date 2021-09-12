@@ -90,42 +90,46 @@ function SectionBook({arrBook}) {
                                              height="auto" width="600"
                                              className="w-100"/>
                                     </div>
-                                    <div id={`${ID}__form__qty`}
-                                         className="input-group input-group-lg">
-                                        <button type="button"
-                                                className="input-group-text btn fw-bold"
-                                                onClick={() => {
-                                                    if (stateFormQty > 1) {
-                                                        setFormQty(stateFormQty - 1);
-                                                    }
-                                                }}
-                                                disabled={stateFormQty <= 1}>
-                                            -
-                                        </button>
-                                        <input type="text" min={1} max={QTY_MAX}
-                                               value={stateFormQty}
-                                               className="form-control border-0 p-0 bg-transparent text-center fs-1 pe-none user-select-none"
-                                               style={{maxWidth: "1em"}}
-                                               readOnly={true} aria-readonly={true} aria-label="option - quantity"/>
-                                        <button type="button"
-                                                className="input-group-text btn fw-bold"
-                                                onClick={() => {
-                                                    if (stateFormQty < QTY_MAX) {
-                                                        setFormQty(stateFormQty + 1);
-                                                    }
-                                                }}
-                                                disabled={stateFormQty >= QTY_MAX}>
-                                            +
-                                        </button>
-                                    </div>
-                                    <div id={`${ID}__form__price`}>
-                                        {`$${PRICE}`}
+                                    <div id={`${ID}__form__options`}
+                                         className="d-flex align-items-center justify-content-between">
+                                        <div id={`${ID}__form__options__qty`}
+                                             className="input-group input-group-lg">
+                                            <button type="button"
+                                                    className="input-group-text btn fw-bold"
+                                                    onClick={() => {
+                                                        if (stateFormQty > 1) {
+                                                            setFormQty(stateFormQty - 1);
+                                                        }
+                                                    }}
+                                                    disabled={stateFormQty <= 1}>
+                                                -
+                                            </button>
+                                            <input type="text" min={1} max={QTY_MAX}
+                                                   value={stateFormQty}
+                                                   className="form-control border-0 p-0 bg-transparent text-center fs-1 pe-none user-select-none"
+                                                   style={{maxWidth: "1em"}}
+                                                   readOnly={true} aria-readonly={true} aria-label="option - quantity"/>
+                                            <button type="button"
+                                                    className="input-group-text btn fw-bold"
+                                                    onClick={() => {
+                                                        if (stateFormQty < QTY_MAX) {
+                                                            setFormQty(stateFormQty + 1);
+                                                        }
+                                                    }}
+                                                    disabled={stateFormQty >= QTY_MAX}>
+                                                +
+                                            </button>
+                                        </div>
+                                        <div id={`${ID}__form__options__price`}
+                                             className="px-3 fs-1">
+                                            {`$${PRICE}`}
+                                        </div>
                                     </div>
                                     <div id={`${ID}__form__add`}
-                                         className="d-flex align-items-center">
+                                         className="d-flex align-items-center justify-content-between">
                                         <button type="button"
                                                 id={`${ID}__form__add__button`}
-                                                className="btn btn-primary btn-lg"
+                                                className="btn btn-primary"
                                                 onClick={() => {
                                                     if (stateFormQty + stateCartQty > QTY_MAX) {
                                                         setCartQty(QTY_MAX);
