@@ -23,7 +23,8 @@ function SectionFooter() {
                                        className="form-control fw-bold letter-spacing-3"
                                        style={{maxWidth: 300}}/>
                                 <button type="button"
-                                        className="btn btn-primary fw-bold letter-spacing-3">
+                                        className="btn btn-primary fw-bold letter-spacing-3"
+                                        style={{fontSize: "0.875rem"}}>
                                     SIGN UP
                                 </button>
                             </div>
