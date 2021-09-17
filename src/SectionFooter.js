@@ -17,13 +17,14 @@ function SectionFooter() {
                                    className="display-4 d-block mb-4 mb-lg-5">
                                 Join our newsletter!
                             </label>
-                            <div className="input-group input-group-lg">
+                            <div className="input-group">
                                 <input type="email" placeholder="myla@hallownest.com"
                                        id="newsletter__input"
-                                       className="form-control"
+                                       className="form-control fw-bold letter-spacing-3"
                                        style={{maxWidth: 300}}/>
-                                <button className="btn btn-primary">
-                                    sign up
+                                <button type="button"
+                                        className="btn btn-primary fw-bold letter-spacing-3">
+                                    SIGN UP
                                 </button>
                             </div>
                         </form>
