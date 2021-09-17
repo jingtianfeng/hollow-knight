@@ -132,7 +132,10 @@ function SectionBook({arrBook}) {
                                         <button type="button"
                                                 id={`${ID}__form__add__button`}
                                                 className="btn btn-primary fw-bold letter-spacing-3"
-                                                style={{minWidth: 150}}
+                                                style={{
+                                                    minWidth: 150,
+                                                    fontSize: "0.875rem"
+                                                }}
                                                 onClick={() => {
                                                     if (stateFormQty + stateCartQty > QTY_MAX) {
                                                         setCartQty(QTY_MAX);
