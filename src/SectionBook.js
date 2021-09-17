@@ -93,7 +93,8 @@ function SectionBook({arrBook}) {
                                     <div id={`${ID}__form__options`}
                                          className="d-flex align-items-center justify-content-between">
                                         <div id={`${ID}__form__options__qty`}
-                                             className="input-group input-group-lg">
+                                             className="input-group input-group-lg justify-content-center"
+                                             style={{width: 150}}>
                                             <button type="button"
                                                     className="input-group-text btn fw-bold"
                                                     onClick={() => {
@@ -121,15 +122,17 @@ function SectionBook({arrBook}) {
                                             </button>
                                         </div>
                                         <div id={`${ID}__form__options__price`}
-                                             className="px-3 fs-1">
+                                             className="px-3 fs-1 user-select-none">
                                             {`$${PRICE}`}
                                         </div>
                                     </div>
                                     <div id={`${ID}__form__add`}
-                                         className="d-flex align-items-center justify-content-between">
+                                         className="d-flex align-items-center justify-content-between mt-4"
+                                         style={{minHeight: 66}}>
                                         <button type="button"
                                                 id={`${ID}__form__add__button`}
-                                                className="btn btn-primary"
+                                                className="btn btn-primary fw-bold letter-spacing-3"
+                                                style={{minWidth: 150}}
                                                 onClick={() => {
                                                     if (stateFormQty + stateCartQty > QTY_MAX) {
                                                         setCartQty(QTY_MAX);
@@ -140,14 +143,14 @@ function SectionBook({arrBook}) {
                                                 disabled={stateCartQty >= QTY_MAX}>
                                             {
                                                 stateCartQty < QTY_MAX ?
-                                                    "Add to cart" :
-                                                    `Max ${QTY_MAX} allowed`
+                                                    "ADD TO CART" :
+                                                    `MAX ${QTY_MAX} ALLOWED`
                                             }
                                         </button>
                                         {
                                             stateCartQty > 0 ?
                                                 <div role="alert" id={`${ID}__form__add__status`}
-                                                     className="alert d-flex align-items-center m-0">
+                                                     className="alert d-flex align-items-center m-0 user-select-none">
                                                     <svg x="0px" y="0px"
                                                          className="me-2"
                                                          width="48px" height="48px" viewBox="0 0 48 48"
@@ -161,7 +164,9 @@ function SectionBook({arrBook}) {
                                                         </g>
                                                     </svg>
                                                     <div style={{fontSize: "0.75rem", lineHeight: 1.25}}>
-                                                        Added {stateCartQty} <br/> to your cart!
+                                                        Added <strong className="text-white">{stateCartQty}</strong>
+                                                        <br/>
+                                                        to your cart!
                                                     </div>
                                                 </div>
                                                 :
