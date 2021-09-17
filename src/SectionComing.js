@@ -36,11 +36,12 @@ function SectionComing() {
                                          alt="vinyl - original soundtrack"
                                          className="card-img"/>
                                     <div className="card-img-overlay d-flex flex-column justify-content-end">
-                                        <h3 className="card-text h6">
+                                        <h3 className="card-text h5 letter-spacing-5">
                                             {title}
                                         </h3>
-                                        <p className="fst-italic mb-0 mb-lg-5">
-                                            {text}
+                                        <p className="mb-0 mb-lg-5 text-uppercase text-white-50 letter-spacing-5"
+                                           style={{fontSize: "0.75rem"}}>
+                                            - {text} -
                                         </p>
                                     </div>
                                 </div>
