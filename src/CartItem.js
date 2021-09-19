@@ -62,10 +62,28 @@ function CartItem(
                 </div>
             </div>
             <button type="button"
-                    className="btn-close position-absolute"
-                    style={{top: 0, right: 4}}
+                    className="btn position-absolute m-0 p-0"
+                    style={{
+                        top: 0, right: 4,
+                        width: "2rem", height: "2rem"
+                    }}
                     aria-label="delete cart item"
-                    onClick={() => setCartQty(0)}/>
+                    onClick={() => setCartQty(0)}>
+                <svg x="0px" y="0px"
+                     width="16px" height="16px" viewBox="0 0 16 16">
+                    <g transform="translate(0, 0)">
+                        <path d="M2.5,5.5l.865,8.649A1.5,1.5,0,0,0,4.857,15.5h6.286a1.5,1.5,0,0,0,1.492-1.351L13.5,5.5"
+                              fill="none" stroke="currentColor"
+                              strokeLinecap="round" strokeLinejoin="round"/>
+                        <line x1="0.5" y1="3.5" x2="15.5" y2="3.5"
+                              fill="none" stroke="currentColor"
+                              strokeLinecap="round" strokeLinejoin="round"/>
+                        <polyline points="5.5 3.5 5.5 0.5 10.5 0.5 10.5 3.5"
+                                  fill="none" stroke="currentColor"
+                                  strokeLinecap="round" strokeLinejoin="round"/>
+                    </g>
+                </svg>
+            </button>
         </div>
     );
 }
