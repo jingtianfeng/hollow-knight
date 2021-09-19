@@ -7,13 +7,13 @@ function CartItem(
     }
 ) {
     return (
-        <div className="row position-relative pt-2 text-light">
+        <div className="row position-relative pt-3 text-light">
             <div className="col col-3">
                 <img src={IMAGES[0].src} alt={`book - ${TITLE}`}
-                     height={80} width={80}
+                     height={100} width={100}
                      style={{
-                         marginTop: -4,
-                         marginLeft: -20
+                         marginTop: -12,
+                         marginLeft: -48
                      }}/>
             </div>
             <div className="col col-9">
@@ -52,7 +52,7 @@ function CartItem(
                         </div>
                     </div>
                     <div className="col">
-                        <span className="fs-5">
+                        <span className="fs-5" style={{opacity: 0.875}}>
                             {`$${PRICE}`}
                         </span>
                     </div>

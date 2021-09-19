@@ -65,6 +65,7 @@ $carousel-transition-duration: 0.5s;
 
 $modal-content-bg: $gray-850;
 $modal-title-line-height: 1;
+$modal-inner-padding: $spacer * 1.5;
 $offcanvas-horizontal-width: 300px;
 
 @import "~bootstrap/scss/variables";

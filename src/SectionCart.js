@@ -26,17 +26,17 @@ function SectionCart({arrBook}) {
                     {arrBook.map((bookObj, cartItemIdx) => {
                         return (
                             <li key={cartItemIdx}
-                                className="list-group-item bg-dark">
+                                className="list-group-item bg-transparent">
                                 <CartItem book={bookObj}/>
                             </li>
                         );
                     })}
                 </ul>
-                <div className="row row-cols-auto justify-content-between">
+                <div className="row row-cols-auto justify-content-between fs-5 letter-spacing-3 mt-5">
                     <span className="col">
-                        Subtotal:
+                        Subtotal
                     </span>
-                    <span className="col">
+                    <span className="col fw-bold">
                         $
                         {arrBook.reduce((acc, bookObj) => {
                             return acc + bookObj.stateCartQty * bookObj.PRICE;
@@ -45,11 +45,12 @@ function SectionCart({arrBook}) {
                 </div>
                 <button type="button"
                         id="cart__body__checkout"
-                        className="btn btn-primary"
+                        className="btn btn-primary fw-bold letter-spacing-3 w-100 d-block mt-3"
                         data-bs-toggle="modal"
                         data-bs-target="#checkout"
-                        data-bs-dismiss="offcanvas">
-                    Checkout
+                        data-bs-dismiss="offcanvas"
+                        disabled={true}>
+                    CHECKOUT
                 </button>
             </div>
         </div>
