@@ -11,11 +11,8 @@ function CartItem(
             <div className="col col-3">
                 <img src={IMAGES[0].src} alt={`book - ${TITLE}`}
                      height={80} width={80}
-                     className="img-fluid"
                      style={{
-                         maxHeight: 100,
-                         maxWidth: 100,
-                         marginTop: -8,
+                         marginTop: -4,
                          marginLeft: -20
                      }}/>
             </div>
@@ -26,7 +23,7 @@ function CartItem(
                 <div className="row row-cols-auto align-items-center justify-content-between">
                     <div className="col"
                          style={{marginLeft: "-1rem"}}>
-                        <div className="input-group input-group-lg">
+                        <div className="input-group">
                             <button type="button"
                                     className="input-group-text btn fw-bold"
                                     onClick={() => {
@@ -39,7 +36,7 @@ function CartItem(
                             </button>
                             <input type="text" min={1} max={QTY_MAX}
                                    value={stateCartQty}
-                                   className="form-control border-0 p-0 bg-transparent text-center fs-3 pe-none user-select-none"
+                                   className="form-control border-0 p-0 bg-transparent text-center fs-5 pe-none user-select-none"
                                    style={{maxWidth: "1em"}}
                                    readOnly={true} aria-readonly={true} aria-label="option - quantity"/>
                             <button type="button"
@@ -55,7 +52,7 @@ function CartItem(
                         </div>
                     </div>
                     <div className="col">
-                        <span className="fs-3">
+                        <span className="fs-5">
                             {`$${PRICE}`}
                         </span>
                     </div>
