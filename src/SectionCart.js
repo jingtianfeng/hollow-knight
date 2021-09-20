@@ -21,17 +21,23 @@ function SectionCart({arrBook}) {
             </div>
             <div id="cart__body"
                  className="offcanvas-body">
-                <ul id="cart__body__items"
-                    className="list-group">
-                    {arrBook.map((bookObj, cartItemIdx) => {
-                        return (
-                            <li key={cartItemIdx}
-                                className="list-group-item bg-transparent">
-                                <CartItem book={bookObj}/>
-                            </li>
-                        );
-                    })}
-                </ul>
+                {
+                    arrBook.reduce((acc, objBook) => acc + objBook.stateCartQty, 0) === 0 ?
+                        <p className="mb-0">Your cart is empty.</p>
+                        :
+                        <ul id="cart__body__items"
+                            className="list-group">
+                            {arrBook.map((bookObj, cartItemIdx) =>
+                                bookObj.stateCartQty > 0 ?
+                                    <li key={cartItemIdx}
+                                        className="list-group-item bg-transparent">
+                                        <CartItem book={bookObj}/>
+                                    </li>
+                                    :
+                                    null
+                            )}
+                        </ul>
+                }
                 <div className="row row-cols-auto justify-content-between fs-5 letter-spacing-3 mt-5">
                     <span className="col">
                         Subtotal
