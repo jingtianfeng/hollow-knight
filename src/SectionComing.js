@@ -4,7 +4,7 @@ import vinylOriginal2 from "./img/vinyl/original-2.png";
 function SectionComing() {
     return (
         <section id="section-coming"
-                 className="py-6 border-bottom">
+                 className="py-7 border-bottom">
             <div className="container">
                 <h2 className="text-center fs-1 letter-spacing-7 mb-5">
                     Coming Soon
