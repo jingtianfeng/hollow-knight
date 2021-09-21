@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/hollow-knight/static/css/main.a41e9b95.chunk.css",
-    "main.js": "/hollow-knight/static/js/main.4caec77a.chunk.js",
-    "main.js.map": "/hollow-knight/static/js/main.4caec77a.chunk.js.map",
+    "main.css": "/hollow-knight/static/css/main.acc2c717.chunk.css",
+    "main.js": "/hollow-knight/static/js/main.a1b36c5d.chunk.js",
+    "main.js.map": "/hollow-knight/static/js/main.a1b36c5d.chunk.js.map",
     "runtime-main.js": "/hollow-knight/static/js/runtime-main.d609d924.js",
     "runtime-main.js.map": "/hollow-knight/static/js/runtime-main.d609d924.js.map",
     "static/js/2.9437defe.chunk.js": "/hollow-knight/static/js/2.9437defe.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.3a20d289.chunk.js": "/hollow-knight/static/js/3.3a20d289.chunk.js",
     "static/js/3.3a20d289.chunk.js.map": "/hollow-knight/static/js/3.3a20d289.chunk.js.map",
     "index.html": "/hollow-knight/index.html",
-    "static/css/main.a41e9b95.chunk.css.map": "/hollow-knight/static/css/main.a41e9b95.chunk.css.map",
+    "static/css/main.acc2c717.chunk.css.map": "/hollow-knight/static/css/main.acc2c717.chunk.css.map",
     "static/js/2.9437defe.chunk.js.LICENSE.txt": "/hollow-knight/static/js/2.9437defe.chunk.js.LICENSE.txt",
     "static/media/banner.b53230a8.png": "/hollow-knight/static/media/banner.b53230a8.png",
     "static/media/gods-nightmares-2.f2f6d779.png": "/hollow-knight/static/media/gods-nightmares-2.f2f6d779.png",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.d609d924.js",
     "static/js/2.9437defe.chunk.js",
-    "static/css/main.a41e9b95.chunk.css",
-    "static/js/main.4caec77a.chunk.js"
+    "static/css/main.acc2c717.chunk.css",
+    "static/js/main.a1b36c5d.chunk.js"
   ]
 }
