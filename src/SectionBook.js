@@ -1,21 +1,14 @@
 import hrTop from "./img/hr2.png";
 import hrBottom from "./img/hr-bottom.png";
-import marker from "./img/marker3.png";
 
 function SectionBook({arrBook}) {
     return (
         <section id="section-book"
-                 className="pt-6 pb-7 border-bottom">
+                 className="py-7 border-bottom">
             <div className="container">
-                <h2 className="text-center">
-                    Books
+                <h2 className="text-center fs-1 letter-spacing-7 visually-hidden">
+                    Top Sellers
                 </h2>
-                <img src={marker} alt="divider"
-                     className="d-block mx-auto"
-                     style={{width: 24, height: 24, opacity: 0.875}}/>
-                <p className="mt-2 text-center">
-                    (placeholder)
-                </p>
                 {
                     arrBook.map((
                         {
@@ -25,7 +18,7 @@ function SectionBook({arrBook}) {
                         }, bookIdx) => {
                         return (
                             <div id={ID} key={bookIdx}
-                                 className="row gy-5 gx-lg-7 mt-5">
+                                 className={`row gy-5 gx-lg-7 ${bookIdx === 0 ? "" : "mt-4"}`}>
                                 <div className="col-12 col-lg-5">
                                     <div id={`${ID}__carousel`}
                                          className="carousel slide"
