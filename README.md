@@ -1,14 +1,12 @@
 # E-commerce storefront for Hollow Knight
 
-> This project is my first attempt at building an e-commerce storefront...
+> This project is my first attempt at building an e-commerce storefront.
+> Website link in the About section to the right!
 
-| Tech Stack                                                          | Comments |
-| ------------------------------------------------------------------- | -------- |
-| [Bootstrap 5](https://getbootstrap.com/)                            | Checkout [src/bootstrap.scss](src/bootstrap.scss) for theming. |
-| [React 17](https://reactjs.org/)                                    | `TBD` |
-| [Create React App](https://github.com/facebook/create-react-app)    | `TBD` |
-
------------------------------------------------------------------------------------------------------------------------
+| Tech Stack                             | Comments |
+| -------------------------------------- | -------- |
+| [Bootstrap](https://getbootstrap.com/) | `v5` &nbsp;&nbsp;&nbsp; Checkout [src/bootstrap.scss](src/bootstrap.scss) for theming |
+| [React](https://reactjs.org/)          | `v17`&nbsp;&nbsp; Bootstrapped with [Create React App](https://github.com/facebook/create-react-app) |
 
 #### Next Steps
 
